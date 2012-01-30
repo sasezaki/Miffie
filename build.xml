@@ -16,6 +16,7 @@
    <fileset dir="${zf2}/library">
     <include name="Zend/Cache/**/*.php" />
     <include name="Zend/Console/**/*.php" />
+    <include name="Zend/Dom/**/*.php" />
     <include name="Zend/EventManager/**/*.php" />
     <include name="Zend/Http/**/*.php" />
     <include name="Zend/Serializer/**/*.php" />
