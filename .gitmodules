@@ -1,0 +1,15 @@
+[submodule "vendor/Diggin_Scraper"]
+	path = vendor/Diggin_Scraper
+	url = git://github.com/diggin/Diggin_Scraper.git
+[submodule "vendor/Diggin_Scraper_Adapter_Htmlscraping"]
+	path = vendor/Diggin_Scraper_Adapter_Htmlscraping
+	url = git://github.com/diggin/Diggin_Scraper_Adapter_Htmlscraping.git
+[submodule "vendor/Diggin_Service_Wedata"]
+	path = vendor/Diggin_Service_Wedata
+	url = git://github.com/diggin/Diggin_Service_Wedata.git
+[submodule "vendor/zf2"]
+	path = vendor/zf2
+	url = git://github.com/zendframework/zf2.git
+[submodule "vendor/Diggin_Http_Charset"]
+	path = vendor/Diggin_Http_Charset
+	url = git://github.com/diggin/Diggin_Http_Charset.git

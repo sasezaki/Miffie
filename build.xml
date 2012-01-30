@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Miffie" default="build">
+
+ <property name="basedir" value="." />
+ <property name="zf2" value="vendor/zf2" />
+ <property name="scraper" value="vendor/Diggin_Scraper" />
+ <property name="htmlscraping" value="vendor/Diggin_Scraper_Adapter_Htmlscraping" />
+ <property name="charset" value="vendor/Diggin_Http_Charset" />
+ <property name="wedata" value="vendor/Diggin_Service_Wedata" />
+
+ <!-- copy Miffie -->
+
+ <!-- copy ZF2 -->
+ <target name="zf2copy">
+  <copy toDir="${basedir}/src">
+   <fileset dir="${zf2}/library">
+    <include name="Zend/Cache/**/*.php" />
+    <include name="Zend/Console/**/*.php" />
+    <include name="Zend/EventManager/**/*.php" />
+    <include name="Zend/Http/**/*.php" />
+    <include name="Zend/Serializer/**/*.php" />
+    <include name="Zend/Stdlib/**/*.php" />
+    <include name="Zend/Loader/**/*.php" />
+    <include name="Zend/Uri/**/*.php" />
+    <include name="Zend/Validator/**/*.php" />
+    </fileset>
+   </copy>
+ </target>
+
+ <target name="diggincopy">
+   <!-- copy Diggin_Scraper-->
+   <copy toDir="${basedir}/src">
+    <fileset dir="${scraper}/src">
+        <include name="**/*.php" />
+    </fileset>
+   </copy>
+   
+   <!-- copy Diggin_Scraper_Adapter_Htmlscraping-->
+   <copy toDir="${basedir}/src">
+    <fileset dir="${htmlscraping}/src">
+        <include name="**/*.php" />
+    </fileset>
+   </copy>
+
+   <!-- copy Diggin_Http_Charset-->
+   <copy toDir="${basedir}/src">
+    <fileset dir="${charset}/src">
+        <include name="**/*.php" />
+    </fileset>
+   </copy>
+
+   <!-- copy Diggin_Service_Wedata-->
+   <copy toDir="${basedir}/src">
+    <fileset dir="${wedata}/src">
+        <include name="**/*.php" />
+    </fileset>
+   </copy>
+
+ </target>
+
+ <target name="phar">
+  <!--
+  <pharpackage 
+   destfile="${basedir}/miffie.phar" basedir="./"
+   stub="" clistub="${basedir}/cli.stub.php"
+  >
+  <fileset dir="${basedir}/build/src">
+    <include name="**/**" />
+  </fileset>
+    </pharpackage>
+    -->
+ </target>
+
+ <target name="clean">
+  <delete dir="${basedir}/src/Zend" />
+  <delete dir="${basedir}/src/Diggin" />
+ </target>
+ <target name="build" depends="clean, zf2copy, diggincopy, phar" />
+</project>
