@@ -27,6 +27,9 @@ class CLIRunner
         } catch (\Exception $e){
             echo $e->getMessage(), PHP_EOL;
             echo $getopt->getUsageMessage();
+            echo '', PHP_EOL;
+            echo '// example..', PHP_EOL;
+            echo '$php miffie.phar -x img -v @src http://example.com/', PHP_EOL;
         }
     }
 
