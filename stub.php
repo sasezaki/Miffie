@@ -26,7 +26,7 @@ define('Miffie_SIG', $sig['hash']);
 define('Miffie_SIGTYPE', $sig['hash_type']);
 
 if (PHP_SAPI == 'cli') {
-    Miffie\CLIRunner::run();
+    Miffie\CLIRunner::run($argv);
 }
 
 __HALT_COMPILER();
