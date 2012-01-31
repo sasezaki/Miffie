@@ -9,8 +9,8 @@
   <email>sasezaki@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2012-01-30</date>
- <time>23:53:10</time>
+ <date>2012-01-31</date>
+ <time>00:08:54</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -298,6 +298,11 @@
    <file role="php" name="php/Zend/EventManager/EventDescription.php"/>
    <file role="php" name="php/Zend/EventManager/EventCollection.php"/>
    <file role="php" name="php/Zend/EventManager/Event.php"/>
+   <file role="php" name="php/Zend/Dom/Query.php"/>
+   <file role="php" name="php/Zend/Dom/NodeList.php"/>
+   <file role="php" name="php/Zend/Dom/Exception/RuntimeException.php"/>
+   <file role="php" name="php/Zend/Dom/Exception.php"/>
+   <file role="php" name="php/Zend/Dom/Css2Xpath.php"/>
    <file role="php" name="php/Zend/Console/Getopt.php"/>
    <file role="php" name="php/Zend/Console/Exception/RuntimeException.php"/>
    <file role="php" name="php/Zend/Console/Exception/InvalidArgumentException.php"/>
@@ -612,6 +617,11 @@
    <install name="php/Zend/Console/Exception/InvalidArgumentException.php" as="Zend/Console/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Console/Exception/RuntimeException.php" as="Zend/Console/Exception/RuntimeException.php"/>
    <install name="php/Zend/Console/Getopt.php" as="Zend/Console/Getopt.php"/>
+   <install name="php/Zend/Dom/Css2Xpath.php" as="Zend/Dom/Css2Xpath.php"/>
+   <install name="php/Zend/Dom/Exception.php" as="Zend/Dom/Exception.php"/>
+   <install name="php/Zend/Dom/Exception/RuntimeException.php" as="Zend/Dom/Exception/RuntimeException.php"/>
+   <install name="php/Zend/Dom/NodeList.php" as="Zend/Dom/NodeList.php"/>
+   <install name="php/Zend/Dom/Query.php" as="Zend/Dom/Query.php"/>
    <install name="php/Zend/EventManager/Event.php" as="Zend/EventManager/Event.php"/>
    <install name="php/Zend/EventManager/EventCollection.php" as="Zend/EventManager/EventCollection.php"/>
    <install name="php/Zend/EventManager/EventDescription.php" as="Zend/EventManager/EventDescription.php"/>

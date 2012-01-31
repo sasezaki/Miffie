@@ -31,7 +31,7 @@ class Spider
         $this->options = $options;
     }
 
-    public function run()
+    public function run($url)
     {
         $this->init();
 
@@ -42,7 +42,7 @@ class Spider
         $client = $this->getHttpClient();
 
         // extract options
-        $this->startUrl = $url = $this->options['url'];
+        $this->startUrl = $url;
         $opt = $this->options;
 
         for ($i = 1; $i <= $depth; $i++) {
@@ -141,9 +141,6 @@ class Spider
 
         if(!isset($opt['xpath'])) {
             throw new \InvalidArgumentException('currently, should use xpath: -x //html/body');
-        }
-        if(!isset($opt['url'])) {
-            throw new \InvalidArgumentException('URL is not set');
         }
 
         //todo

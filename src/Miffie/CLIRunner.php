@@ -8,19 +8,19 @@ class CLIRunner
 {
     public static function run()
     {
-        $getopt = static::getOpt();
-
-        $options = $getopt->getOptionVars();
-
         try {
+            $getopt = static::getOpt();
+            $options = $getopt->getOptionVars();
             $remain = $getopt->getRemainingArgs();
             if (count($remain) === 0) {
                 throw new \InvalidArgumentException('URL is not set');
             }
-            // push remains[0] as url
-            $options['url'] = $remain[0];
-            $runner = new Spider($options);
-            $runner->run();
+
+            $urls = ($remain[0] == '-') ? new NoRewindIterator(new SplFileObject(STDIN)) : $remain;
+            foreach ($urls as $url) {
+                $runner = new Spider($options);
+                $runner->run($url);
+            }
         } catch (\Exception $e){
             echo $e->getMessage(), PHP_EOL;
             echo $getopt->getUsageMessage();
