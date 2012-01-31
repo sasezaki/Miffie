@@ -109,7 +109,7 @@ class Spider
 
             if (!$doNext or ($i == $depth)) {
                 echo PHP_EOL;
-                exit;
+                goto loop_exit;
             }
             
             if ($ret['nextLink'] === false) {
@@ -122,7 +122,7 @@ class Spider
                 sleep($this->stoptime);
             }
         }
-
+        loop_exit:
     }
 
     public function setupAutoPagerize()

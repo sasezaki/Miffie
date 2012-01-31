@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Miffie" default="build">
 
+ <taskdef name="stripforphar" classname="tasks.StripForPharTask" />
+
  <property name="basedir" value="." />
  <property name="zf2" value="vendor/zf2" />
  <property name="scraper" value="vendor/Diggin_Scraper" />
  <property name="htmlscraping" value="vendor/Diggin_Scraper_Adapter_Htmlscraping" />
  <property name="charset" value="vendor/Diggin_Http_Charset" />
  <property name="wedata" value="vendor/Diggin_Service_Wedata" />
+ <property name="pyrus" value="~/dev/pyrus_Pyrus/scripts/pyrus" />
 
  <!-- copy Miffie -->
 
@@ -24,8 +27,8 @@
     <include name="Zend/Loader/**/*.php" />
     <include name="Zend/Uri/**/*.php" />
     <include name="Zend/Validator/**/*.php" />
-    </fileset>
-   </copy>
+   </fileset>
+  </copy>
  </target>
 
  <target name="diggincopy">
@@ -59,22 +62,18 @@
 
  </target>
 
+ <target name="strip">
+    <stripforphar dir="./src/Diggin" />
+    <stripforphar dir="./src/Zend" />
+ </target>
  <target name="phar">
-  <!--
-  <pharpackage 
-   destfile="${basedir}/miffie.phar" basedir="./"
-   stub="" clistub="${basedir}/cli.stub.php"
-  >
-  <fileset dir="${basedir}/build/src">
-    <include name="**/**" />
-  </fileset>
-    </pharpackage>
-    -->
+  <exec command="php -d phar.readonly=0 ${pyrus} package -p" />
+  <move file="Miffie-0.1.0.phar" tofile="miffie.phar" overwrite="true"/>
  </target>
 
  <target name="clean">
   <delete dir="${basedir}/src/Zend" />
   <delete dir="${basedir}/src/Diggin" />
  </target>
- <target name="build" depends="clean, zf2copy, diggincopy, phar" />
+ <target name="build" depends="clean, zf2copy, diggincopy, strip, phar" />
 </project>

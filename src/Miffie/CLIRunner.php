@@ -1,12 +1,14 @@
 <?php
 namespace Miffie;
 
-use Miffie\GetoptExt,
+use NoRewindIterator,
+    SplFileObject,
+    Miffie\GetoptExt,
     Miffie\Spider;
 
 class CLIRunner
 {
-    public static function run()
+    public static function run($argv)
     {
         try {
             $getopt = static::getOpt();
@@ -15,8 +17,9 @@ class CLIRunner
             if (count($remain) === 0) {
                 throw new \InvalidArgumentException('URL is not set');
             }
+            
+            $urls = $remain;
 
-            $urls = ($remain[0] == '-') ? new NoRewindIterator(new SplFileObject(STDIN)) : $remain;
             foreach ($urls as $url) {
                 $runner = new Spider($options);
                 $runner->run($url);
