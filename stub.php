@@ -1,10 +1,5 @@
 #!/usr/bin/env php
 <?php
-/**
- * If your package does special stuff in phar format, use this file.  Remove if
- * no phar format is ever generated
- * More information: http://pear.php.net/manual/en/pyrus.commands.package.php#pyrus.commands.package.stub
- */
 try {
     Phar::mapPhar();
 } catch (Exception $e) {

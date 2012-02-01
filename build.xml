@@ -67,6 +67,7 @@
     <stripforphar dir="./src/Zend" />
  </target>
  <target name="phar">
+  <exec command="php -d phar.readonly=0 ${pyrus} make" />
   <exec command="php -d phar.readonly=0 ${pyrus} package -p" />
   <move file="Miffie-0.1.0.phar" tofile="miffie.phar" overwrite="true"/>
  </target>
