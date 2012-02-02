@@ -10,6 +10,16 @@ class CLIRunner
 {
     public static function run($argv)
     {
+        // check backend commands
+        if (isset($argv[1]) && strpos($argv[1], '---') === 0) {
+            if ($argv[1] == '---autopagerize-setup') {
+                static::setupAutoPagerize();
+            } else if ($argv[1] == '---autopagerize-search') {
+                static::testSearchAutoPagerize($argv[2]);
+            }
+            exit(0);
+        }
+
         try {
             $getopt = static::getOpt();
             $options = $getopt->getOptionVars();
@@ -33,10 +43,17 @@ class CLIRunner
         }
     }
 
-    public static function setup()
+    public static function setupAutoPagerize()
     {
         $spider = new Spider(array());
         $spider->setupAutoPagerize();
+    }
+
+    public static function testSearchAutoPagerize($url)
+    {
+        $spider = new Spider(array());
+        $storage = $spider->getWedataStorage();
+        var_dump($storage->searchItemData('AutoPagerize', 'url', $url));
     }
 
     public static function getOpt()

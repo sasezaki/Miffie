@@ -8,7 +8,7 @@ use Zend\Http\Client,
     Diggin\Scraper\Scraper,
     Diggin\Scraper\Process as ScraperProcess,
     Diggin\Service\Wedata\Api\ZF2Client as WedataApi,
-    Diggin\Service\Wedata\Storage\Cache;
+    Diggin\Service\Wedata\Storage\Cache as WedataStorage;
 
 class Spider
 {
@@ -127,12 +127,12 @@ class Spider
 
     public function setupAutoPagerize()
     {
-        $cacheStorage = $this->getCacheStorage();
+        $wedataStorage = $this->getWedataStorage();
         $wedata = new WedataApi;
         //$wedata->setHttpClient($this->getHttpClient());
-        $items = $wedata->getItems('AutoPagerize');
+        $items = $wedata->getItems('AutoPagerize', null);
 
-        return $cacheStorage->storeItems('AutoPagerize', $items);
+        return $wedataStorage->storeItems('AutoPagerize', $items);
     }
 
     public function init()
@@ -244,11 +244,11 @@ FUNC
     public function getWedataStorage()
     {
         if (!$this->wedataStorage) {
-            $this->wedataStorage = new WedataStorageCache($this->getCacheStorage());
+            $this->wedataStorage = new WedataStorage($this->getCacheStorage());
             $this->wedataStorage->setSearchItemDataIgnore(function ($current, $key, $iterator) {
                 //if ('^https?://.' != $item['data']['url'] && (preg_match('>'.$item['data']['url'].'>', $url) == 1)) {
                 $data = $current->getData();
-                return $data['url'] !== '^http?://.';
+                return $data->url !== '^https?://.';
             });
         }
         
