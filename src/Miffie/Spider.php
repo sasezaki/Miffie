@@ -35,7 +35,7 @@ class Spider
     {
         $this->init();
 
-        $doNext = isset($opt['depth']);
+        $doNext = (boolean)$this->depth;
         $depth = $this->depth;
 
         $filter = $this->filter;
@@ -79,11 +79,12 @@ class Spider
             $scraper->process($process);
 
             if (isset($nextLink) && !($i == $depth)) {
-                $nextlink = new ScraperProcess;
-                $nextLink->setName('nextLink');
-                $nextLink->setType('@href');
-                $nextLink->setArrayFlag(false);
-                $scraper->process($nextLink);
+                $nl = new ScraperProcess;
+                $nl->setExpression($nextLink);
+                $nl->setName('nextLink');
+                $nl->setType('@href');
+                $nl->setArrayFlag(false);
+                $scraper->process($nl);
             }
 
             if ($this->debug) {
@@ -112,11 +113,12 @@ class Spider
                 goto loop_exit;
             }
             
-            if ($ret['nextLink'] === false) {
+            if (!isset($ret['nextLink'])) {
                 echo 'next page not found';
                 exit;
             } else {
-                $url = $ret['nextLink'];
+                $url = \Zend\Uri\UriFactory::factory((string) $ret['nextLink']);
+                $url->normalize();
                 // todo set-referer
                 echo PHP_EOL;
                 sleep($this->stoptime);
@@ -141,11 +143,6 @@ class Spider
 
         if(!isset($opt['xpath'])) {
             throw new \InvalidArgumentException('currently, should use xpath: -x //html/body');
-        }
-
-        //todo
-        if (isset($opt['nextLink'])) {
-            $this->getCacheStorage()->test();    
         }
 
         if (isset($opt['wait'])) {
@@ -257,14 +254,12 @@ FUNC
 
     public function searchNextLinkFromWedata($url)
     {
-        $item = $this->getWedataStorage()->searchItemData('AutoPagerize', 'nextLink', $url);
-        if($item === false) {
+        $item = $this->getWedataStorage()->searchItemData('AutoPagerize', 'url', $url);
+        if ($item === false) {
             throw new \DomainException('not found from wedata with url:'.$url);
         }
 
-        $data = $item->getData();
-
-        return $data['nextLink'];
+        return $item->getData()->nextLink;
     }
 
     //

@@ -9,8 +9,8 @@
   <email>sasezaki@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2012-01-31</date>
- <time>00:08:54</time>
+ <date>2012-02-03</date>
+ <time>00:08:19</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -195,6 +195,29 @@
    <file role="php" name="php/Zend/Loader/ClassMapAutoloader.php"/>
    <file role="php" name="php/Zend/Loader/Broker.php"/>
    <file role="php" name="php/Zend/Loader/AutoloaderFactory.php"/>
+   <file role="php" name="php/Zend/Json/Server/Smd/Service.php"/>
+   <file role="php" name="php/Zend/Json/Server/Smd.php"/>
+   <file role="php" name="php/Zend/Json/Server/Server.php"/>
+   <file role="php" name="php/Zend/Json/Server/Response/Http.php"/>
+   <file role="php" name="php/Zend/Json/Server/Response.php"/>
+   <file role="php" name="php/Zend/Json/Server/Request/Http.php"/>
+   <file role="php" name="php/Zend/Json/Server/Request.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/RuntimeException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/InvalidArgumentException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/HttpException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/ErrorException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception.php"/>
+   <file role="php" name="php/Zend/Json/Server/Error.php"/>
+   <file role="php" name="php/Zend/Json/Server/Client.php"/>
+   <file role="php" name="php/Zend/Json/Server/Cache.php"/>
+   <file role="php" name="php/Zend/Json/Json.php"/>
+   <file role="php" name="php/Zend/Json/Expr.php"/>
+   <file role="php" name="php/Zend/Json/Exception/RuntimeException.php"/>
+   <file role="php" name="php/Zend/Json/Exception/RecursionException.php"/>
+   <file role="php" name="php/Zend/Json/Exception/InvalidArgumentException.php"/>
+   <file role="php" name="php/Zend/Json/Exception.php"/>
+   <file role="php" name="php/Zend/Json/Encoder.php"/>
+   <file role="php" name="php/Zend/Json/Decoder.php"/>
    <file role="php" name="php/Zend/Http/Response/Stream.php"/>
    <file role="php" name="php/Zend/Http/Response.php"/>
    <file role="php" name="php/Zend/Http/Request.php"/>
@@ -382,6 +405,7 @@
    <file role="php" name="php/Diggin/Service/Wedata/Exception/OverflowException.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Exception/OutOfRangeException.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Exception/OutOfBoundsException.php"/>
+   <file role="php" name="php/Diggin/Service/Wedata/Exception/MissingApiKeyException.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Exception/LogicException.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Exception/LengthException.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Exception/InvalidArgumentException.php"/>
@@ -405,7 +429,6 @@
    <file role="php" name="php/Diggin/Scraper/Strategy/AbstractStrategy.php"/>
    <file role="php" name="php/Diggin/Scraper/Scraper.php"/>
    <file role="php" name="php/Diggin/Scraper/ProcessAggregate.php"/>
-   <file role="php" name="php/Diggin/Scraper/Process/Exception.php"/>
    <file role="php" name="php/Diggin/Scraper/Process.php"/>
    <file role="php" name="php/Diggin/Scraper/Helper/Simplexml/Title.php"/>
    <file role="php" name="php/Diggin/Scraper/Helper/Simplexml/SimplexmlAbstract.php"/>
@@ -417,20 +440,23 @@
    <file role="php" name="php/Diggin/Scraper/Filter/Filter.php"/>
    <file role="php" name="php/Diggin/Scraper/Filter/Exception.php"/>
    <file role="php" name="php/Diggin/Scraper/Exception/RuntimeException.php"/>
+   <file role="php" name="php/Diggin/Scraper/Exception/LogicException.php"/>
    <file role="php" name="php/Diggin/Scraper/Exception/InvalidArgumentException.php"/>
+   <file role="php" name="php/Diggin/Scraper/Exception/DomainException.php"/>
+   <file role="php" name="php/Diggin/Scraper/Exception/BadMethodCallException.php"/>
    <file role="php" name="php/Diggin/Scraper/Exception.php"/>
    <file role="php" name="php/Diggin/Scraper/Evaluator/String.php"/>
    <file role="php" name="php/Diggin/Scraper/Evaluator/Simplexml.php"/>
-   <file role="php" name="php/Diggin/Scraper/Evaluator/Exception.php"/>
    <file role="php" name="php/Diggin/Scraper/Evaluator/AbstractEvaluator.php"/>
    <file role="php" name="php/Diggin/Scraper/Context.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Wrapper/SimpleXMLElement.php"/>
-   <file role="php" name="php/Diggin/Scraper/Adapter/StringAbstract.php"/>
-   <file role="php" name="php/Diggin/Scraper/Adapter/SimplexmlAbstract.php"/>
+   <file role="php" name="php/Diggin/Scraper/Adapter/StringAdapter.php"/>
+   <file role="php" name="php/Diggin/Scraper/Adapter/SimplexmlAdapter.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Normal.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Loadhtml.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Htmlscraping/Htmlscraping.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Htmlscraping/EnvironmentException.php"/>
+   <file role="php" name="php/Diggin/Scraper/Adapter/Exception/UnexpectedValueException.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Exception/RuntimeException.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Exception/InvalidArgumentException.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter/Exception.php"/>
@@ -489,20 +515,23 @@
    <install name="php/Diggin/Scraper/Adapter/Exception.php" as="Diggin/Scraper/Adapter/Exception.php"/>
    <install name="php/Diggin/Scraper/Adapter/Exception/InvalidArgumentException.php" as="Diggin/Scraper/Adapter/Exception/InvalidArgumentException.php"/>
    <install name="php/Diggin/Scraper/Adapter/Exception/RuntimeException.php" as="Diggin/Scraper/Adapter/Exception/RuntimeException.php"/>
+   <install name="php/Diggin/Scraper/Adapter/Exception/UnexpectedValueException.php" as="Diggin/Scraper/Adapter/Exception/UnexpectedValueException.php"/>
    <install name="php/Diggin/Scraper/Adapter/Htmlscraping/EnvironmentException.php" as="Diggin/Scraper/Adapter/Htmlscraping/EnvironmentException.php"/>
    <install name="php/Diggin/Scraper/Adapter/Htmlscraping/Htmlscraping.php" as="Diggin/Scraper/Adapter/Htmlscraping/Htmlscraping.php"/>
    <install name="php/Diggin/Scraper/Adapter/Loadhtml.php" as="Diggin/Scraper/Adapter/Loadhtml.php"/>
    <install name="php/Diggin/Scraper/Adapter/Normal.php" as="Diggin/Scraper/Adapter/Normal.php"/>
-   <install name="php/Diggin/Scraper/Adapter/SimplexmlAbstract.php" as="Diggin/Scraper/Adapter/SimplexmlAbstract.php"/>
-   <install name="php/Diggin/Scraper/Adapter/StringAbstract.php" as="Diggin/Scraper/Adapter/StringAbstract.php"/>
+   <install name="php/Diggin/Scraper/Adapter/SimplexmlAdapter.php" as="Diggin/Scraper/Adapter/SimplexmlAdapter.php"/>
+   <install name="php/Diggin/Scraper/Adapter/StringAdapter.php" as="Diggin/Scraper/Adapter/StringAdapter.php"/>
    <install name="php/Diggin/Scraper/Adapter/Wrapper/SimpleXMLElement.php" as="Diggin/Scraper/Adapter/Wrapper/SimpleXMLElement.php"/>
    <install name="php/Diggin/Scraper/Context.php" as="Diggin/Scraper/Context.php"/>
    <install name="php/Diggin/Scraper/Evaluator/AbstractEvaluator.php" as="Diggin/Scraper/Evaluator/AbstractEvaluator.php"/>
-   <install name="php/Diggin/Scraper/Evaluator/Exception.php" as="Diggin/Scraper/Evaluator/Exception.php"/>
    <install name="php/Diggin/Scraper/Evaluator/Simplexml.php" as="Diggin/Scraper/Evaluator/Simplexml.php"/>
    <install name="php/Diggin/Scraper/Evaluator/String.php" as="Diggin/Scraper/Evaluator/String.php"/>
    <install name="php/Diggin/Scraper/Exception.php" as="Diggin/Scraper/Exception.php"/>
+   <install name="php/Diggin/Scraper/Exception/BadMethodCallException.php" as="Diggin/Scraper/Exception/BadMethodCallException.php"/>
+   <install name="php/Diggin/Scraper/Exception/DomainException.php" as="Diggin/Scraper/Exception/DomainException.php"/>
    <install name="php/Diggin/Scraper/Exception/InvalidArgumentException.php" as="Diggin/Scraper/Exception/InvalidArgumentException.php"/>
+   <install name="php/Diggin/Scraper/Exception/LogicException.php" as="Diggin/Scraper/Exception/LogicException.php"/>
    <install name="php/Diggin/Scraper/Exception/RuntimeException.php" as="Diggin/Scraper/Exception/RuntimeException.php"/>
    <install name="php/Diggin/Scraper/Filter/Exception.php" as="Diggin/Scraper/Filter/Exception.php"/>
    <install name="php/Diggin/Scraper/Filter/Filter.php" as="Diggin/Scraper/Filter/Filter.php"/>
@@ -514,7 +543,6 @@
    <install name="php/Diggin/Scraper/Helper/Simplexml/SimplexmlAbstract.php" as="Diggin/Scraper/Helper/Simplexml/SimplexmlAbstract.php"/>
    <install name="php/Diggin/Scraper/Helper/Simplexml/Title.php" as="Diggin/Scraper/Helper/Simplexml/Title.php"/>
    <install name="php/Diggin/Scraper/Process.php" as="Diggin/Scraper/Process.php"/>
-   <install name="php/Diggin/Scraper/Process/Exception.php" as="Diggin/Scraper/Process/Exception.php"/>
    <install name="php/Diggin/Scraper/ProcessAggregate.php" as="Diggin/Scraper/ProcessAggregate.php"/>
    <install name="php/Diggin/Scraper/Scraper.php" as="Diggin/Scraper/Scraper.php"/>
    <install name="php/Diggin/Scraper/Strategy/AbstractStrategy.php" as="Diggin/Scraper/Strategy/AbstractStrategy.php"/>
@@ -538,6 +566,7 @@
    <install name="php/Diggin/Service/Wedata/Exception/InvalidArgumentException.php" as="Diggin/Service/Wedata/Exception/InvalidArgumentException.php"/>
    <install name="php/Diggin/Service/Wedata/Exception/LengthException.php" as="Diggin/Service/Wedata/Exception/LengthException.php"/>
    <install name="php/Diggin/Service/Wedata/Exception/LogicException.php" as="Diggin/Service/Wedata/Exception/LogicException.php"/>
+   <install name="php/Diggin/Service/Wedata/Exception/MissingApiKeyException.php" as="Diggin/Service/Wedata/Exception/MissingApiKeyException.php"/>
    <install name="php/Diggin/Service/Wedata/Exception/OutOfBoundsException.php" as="Diggin/Service/Wedata/Exception/OutOfBoundsException.php"/>
    <install name="php/Diggin/Service/Wedata/Exception/OutOfRangeException.php" as="Diggin/Service/Wedata/Exception/OutOfRangeException.php"/>
    <install name="php/Diggin/Service/Wedata/Exception/OverflowException.php" as="Diggin/Service/Wedata/Exception/OverflowException.php"/>
@@ -725,6 +754,29 @@
    <install name="php/Zend/Http/Request.php" as="Zend/Http/Request.php"/>
    <install name="php/Zend/Http/Response.php" as="Zend/Http/Response.php"/>
    <install name="php/Zend/Http/Response/Stream.php" as="Zend/Http/Response/Stream.php"/>
+   <install name="php/Zend/Json/Decoder.php" as="Zend/Json/Decoder.php"/>
+   <install name="php/Zend/Json/Encoder.php" as="Zend/Json/Encoder.php"/>
+   <install name="php/Zend/Json/Exception.php" as="Zend/Json/Exception.php"/>
+   <install name="php/Zend/Json/Exception/InvalidArgumentException.php" as="Zend/Json/Exception/InvalidArgumentException.php"/>
+   <install name="php/Zend/Json/Exception/RecursionException.php" as="Zend/Json/Exception/RecursionException.php"/>
+   <install name="php/Zend/Json/Exception/RuntimeException.php" as="Zend/Json/Exception/RuntimeException.php"/>
+   <install name="php/Zend/Json/Expr.php" as="Zend/Json/Expr.php"/>
+   <install name="php/Zend/Json/Json.php" as="Zend/Json/Json.php"/>
+   <install name="php/Zend/Json/Server/Cache.php" as="Zend/Json/Server/Cache.php"/>
+   <install name="php/Zend/Json/Server/Client.php" as="Zend/Json/Server/Client.php"/>
+   <install name="php/Zend/Json/Server/Error.php" as="Zend/Json/Server/Error.php"/>
+   <install name="php/Zend/Json/Server/Exception.php" as="Zend/Json/Server/Exception.php"/>
+   <install name="php/Zend/Json/Server/Exception/ErrorException.php" as="Zend/Json/Server/Exception/ErrorException.php"/>
+   <install name="php/Zend/Json/Server/Exception/HttpException.php" as="Zend/Json/Server/Exception/HttpException.php"/>
+   <install name="php/Zend/Json/Server/Exception/InvalidArgumentException.php" as="Zend/Json/Server/Exception/InvalidArgumentException.php"/>
+   <install name="php/Zend/Json/Server/Exception/RuntimeException.php" as="Zend/Json/Server/Exception/RuntimeException.php"/>
+   <install name="php/Zend/Json/Server/Request.php" as="Zend/Json/Server/Request.php"/>
+   <install name="php/Zend/Json/Server/Request/Http.php" as="Zend/Json/Server/Request/Http.php"/>
+   <install name="php/Zend/Json/Server/Response.php" as="Zend/Json/Server/Response.php"/>
+   <install name="php/Zend/Json/Server/Response/Http.php" as="Zend/Json/Server/Response/Http.php"/>
+   <install name="php/Zend/Json/Server/Server.php" as="Zend/Json/Server/Server.php"/>
+   <install name="php/Zend/Json/Server/Smd.php" as="Zend/Json/Server/Smd.php"/>
+   <install name="php/Zend/Json/Server/Smd/Service.php" as="Zend/Json/Server/Smd/Service.php"/>
    <install name="php/Zend/Loader/AutoloaderFactory.php" as="Zend/Loader/AutoloaderFactory.php"/>
    <install name="php/Zend/Loader/Broker.php" as="Zend/Loader/Broker.php"/>
    <install name="php/Zend/Loader/ClassMapAutoloader.php" as="Zend/Loader/ClassMapAutoloader.php"/>

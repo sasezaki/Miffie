@@ -10,8 +10,8 @@
   <email>sasezaki@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2012-01-31</date>
- <time>00:08:53</time>
+ <date>2012-02-03</date>
+ <time>00:08:18</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -62,6 +62,7 @@ Package Miffie API release notes for version 0.1.0.</notes>
        <dir name="Exception">
         <file role="php" name="InvalidArgumentException.php"/>
         <file role="php" name="RuntimeException.php"/>
+        <file role="php" name="UnexpectedValueException.php"/>
        </dir>
        <dir name="Htmlscraping">
         <file role="php" name="EnvironmentException.php"/>
@@ -73,17 +74,19 @@ Package Miffie API release notes for version 0.1.0.</notes>
        <file role="php" name="Exception.php"/>
        <file role="php" name="Loadhtml.php"/>
        <file role="php" name="Normal.php"/>
-       <file role="php" name="SimplexmlAbstract.php"/>
-       <file role="php" name="StringAbstract.php"/>
+       <file role="php" name="SimplexmlAdapter.php"/>
+       <file role="php" name="StringAdapter.php"/>
       </dir>
       <dir name="Evaluator">
        <file role="php" name="AbstractEvaluator.php"/>
-       <file role="php" name="Exception.php"/>
        <file role="php" name="Simplexml.php"/>
        <file role="php" name="String.php"/>
       </dir>
       <dir name="Exception">
+       <file role="php" name="BadMethodCallException.php"/>
+       <file role="php" name="DomainException.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
+       <file role="php" name="LogicException.php"/>
        <file role="php" name="RuntimeException.php"/>
       </dir>
       <dir name="Filter">
@@ -100,9 +103,6 @@ Package Miffie API release notes for version 0.1.0.</notes>
         <file role="php" name="Title.php"/>
        </dir>
        <file role="php" name="HelperAbstract.php"/>
-      </dir>
-      <dir name="Process">
-       <file role="php" name="Exception.php"/>
       </dir>
       <dir name="Strategy">
        <file role="php" name="AbstractStrategy.php"/>
@@ -132,6 +132,7 @@ Package Miffie API release notes for version 0.1.0.</notes>
         <file role="php" name="InvalidArgumentException.php"/>
         <file role="php" name="LengthException.php"/>
         <file role="php" name="LogicException.php"/>
+        <file role="php" name="MissingApiKeyException.php"/>
         <file role="php" name="OutOfBoundsException.php"/>
         <file role="php" name="OutOfRangeException.php"/>
         <file role="php" name="OverflowException.php"/>
@@ -380,6 +381,43 @@ Package Miffie API release notes for version 0.1.0.</notes>
       <file role="php" name="Headers.php"/>
       <file role="php" name="Request.php"/>
       <file role="php" name="Response.php"/>
+     </dir>
+     <dir name="Json">
+      <dir name="Exception">
+       <file role="php" name="InvalidArgumentException.php"/>
+       <file role="php" name="RecursionException.php"/>
+       <file role="php" name="RuntimeException.php"/>
+      </dir>
+      <dir name="Server">
+       <dir name="Exception">
+        <file role="php" name="ErrorException.php"/>
+        <file role="php" name="HttpException.php"/>
+        <file role="php" name="InvalidArgumentException.php"/>
+        <file role="php" name="RuntimeException.php"/>
+       </dir>
+       <dir name="Request">
+        <file role="php" name="Http.php"/>
+       </dir>
+       <dir name="Response">
+        <file role="php" name="Http.php"/>
+       </dir>
+       <dir name="Smd">
+        <file role="php" name="Service.php"/>
+       </dir>
+       <file role="php" name="Cache.php"/>
+       <file role="php" name="Client.php"/>
+       <file role="php" name="Error.php"/>
+       <file role="php" name="Exception.php"/>
+       <file role="php" name="Request.php"/>
+       <file role="php" name="Response.php"/>
+       <file role="php" name="Server.php"/>
+       <file role="php" name="Smd.php"/>
+      </dir>
+      <file role="php" name="Decoder.php"/>
+      <file role="php" name="Encoder.php"/>
+      <file role="php" name="Exception.php"/>
+      <file role="php" name="Expr.php"/>
+      <file role="php" name="Json.php"/>
      </dir>
      <dir name="Loader">
       <dir name="Exception">

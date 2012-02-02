@@ -22,6 +22,7 @@
     <include name="Zend/Dom/**/*.php" />
     <include name="Zend/EventManager/**/*.php" />
     <include name="Zend/Http/**/*.php" />
+    <include name="Zend/Json/**/*.php" />
     <include name="Zend/Serializer/**/*.php" />
     <include name="Zend/Stdlib/**/*.php" />
     <include name="Zend/Loader/**/*.php" />
