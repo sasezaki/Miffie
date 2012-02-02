@@ -2,7 +2,7 @@
 function Miffie_autoload($class)
 {
     $class = str_replace(array('_', '\\'), '/', $class);
-    if (__DIR__. '/src/' . $class . '.php') {
+    if (file_exists(__DIR__. '/src/' . $class . '.php')) {
         return include __DIR__. '/src/' . $class . '.php';
     }
 }
