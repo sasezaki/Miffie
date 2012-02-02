@@ -1,9 +1,7 @@
 <?php
 namespace Miffie;
 
-use NoRewindIterator,
-    SplFileObject,
-    Miffie\GetoptExt,
+use Miffie\GetoptExt,
     Miffie\Spider;
 
 class CLIRunner
