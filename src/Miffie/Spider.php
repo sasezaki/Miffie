@@ -155,7 +155,7 @@ class Spider
         $this->filter = isset($opt['filter']) ? static::evalFilter($opt['filter']) : null;
     }
     
-    protected function getHttpClient()
+    public function getHttpClient()
     {
         if (!$this->httpClient) {
             $opt = $this->options;
@@ -168,12 +168,12 @@ class Spider
             if (isset($opt['basic'])) {
                 list($basicusername, $basicpassword) = explode('/', $opt['basic']);
                 if(!$basicpassword) throw new InvalidArgumentException('argument is not user/pass');
-                $client->setAuth($basicusername, $basicpassword, Zend_Http_Client::AUTH_BASIC);
+                $client->setAuth($basicusername, $basicpassword, Client::AUTH_BASIC);
             }
 
             if (isset($opt['referer'])) {
                 $referer = $opt['referer'];
-                $client->setHeaders("Referer: $referer");
+                $client->setHeaders(array('referer' => $referer));
             }
 
         /**
