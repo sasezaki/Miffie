@@ -35,7 +35,7 @@ class Spider
     {
         $this->init();
 
-        $doNext = (boolean)$this->depth;
+        $doNext = (boolean) ($this->depth > 1);
         $depth = $this->depth;
 
         $filter = $this->filter;
