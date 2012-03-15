@@ -48,11 +48,19 @@ class Spider
         for ($i = 1; $i <= $depth; $i++) {
 
             $client->setUri($url);
+
+            // is 
+            $urlparts = parse_url($url);
             
-            if (isset($opt['cache']) && !isset($opt['noCache'])) {
-                $response = $this->requestIfNotInCache();
+
+            if (isset($urlparts['scheme'])) {
+                if (isset($opt['cache']) && !isset($opt['noCache'])) {
+                    $response = $this->requestIfNotInCache();
+                } else {
+                    $response = $client->send();
+                }
             } else {
-                $response = $client->send();
+                $response = array(file_get_contents($url));
             }
 
             if ($doNext && !isset($opt['nextlink'])){
@@ -91,7 +99,8 @@ class Spider
                 echo PHP_EOL, time();
             }
 
-            $ret =  $scraper->scrape($response);
+            $baseurl = (isset($opt['baseurl'])) ? $opt['baseurl'] : $url;
+            $ret =  $scraper->scrape($response, $baseurl);
           
             /**
             if ($helper) {

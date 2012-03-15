@@ -71,6 +71,7 @@ class CLIRunner
           'wait|w=s' => 'sleep() :default 1',
         'filter|f=s' => 'filter for Diggin\Scraper',
            'out|o=i' => 'timeout',
+       'baseurl|p=s' => 'baseurl path',
         'helper|l=s' => 'helper'
       )
         );
