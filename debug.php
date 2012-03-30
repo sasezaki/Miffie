@@ -7,5 +7,6 @@ function Miffie_autoload($class)
     }
 }
 spl_autoload_register("Miffie_autoload");
+//require_once __DIR__.'/src/Miffie/Autoload.php';
 
 Miffie\CLIRunner::run($argv);
