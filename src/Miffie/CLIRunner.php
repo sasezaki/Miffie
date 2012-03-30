@@ -24,16 +24,20 @@ class CLIRunner
             $remain = $getopt->getRemainingArgs();
             if (count($remain) === 0) {
                 throw new \InvalidArgumentException('URL is not set');
+            } elseif ($remain[0] === '-'){
+                if ($pipe = stream_get_contents(STDIN)) {
+                    $urls = array_filter(explode(PHP_EOL, $pipe));
+                }
+            } else {
+                $urls = $remain;
             }
-            
-            $urls = $remain;
 
             foreach ($urls as $url) {
                 $runner = new Spider($options);
                 $runner->run($url);
             }
-        } catch (\Exception $e){
-            echo $e->getMessage(), PHP_EOL;
+        } catch (\InvalidArgumentException $iae){
+            echo $iae->getMessage(), PHP_EOL;
             echo $getopt->getUsageMessage();
             echo '', PHP_EOL;
             echo '// example..', PHP_EOL;
@@ -59,7 +63,7 @@ class CLIRunner
         return new GetoptExt(
         array(
          'xpath|x=s' => 'expression xpath or css selector',
-          'type|v=s' => 'val type',
+          'type|v=s' => 'val type (text, asxml, @href, @src) default:text',
        'referer|e=s' => 'referer',
 //     'cookieJar|c=s' => 'cookie',
          'agent|a=s' => 'useragent',
