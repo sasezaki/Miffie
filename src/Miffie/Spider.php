@@ -206,17 +206,35 @@ class Spider
      */
     public static function evalFilter($string)
     {
+        // replace
         if ((substr($string, 0, 2) === 's/') or 
         (substr($string, 0, 2) === 's#')) {
-        $quote = substr($string,1,1);
-        list($regex, $after) = explode($quote, substr($string, 2));
-        $filter = create_function('$var', <<<FUNC
+            $quote = substr($string,1,1);
+            list($regex, $after) = explode($quote, substr($string, 2));
+            $filter = create_function('$var', <<<FUNC
 return preg_replace('/'.preg_quote("$regex", '/').'/', "$after", \$var);
 FUNC
 );
+            return $filter;
         }
 
-        return $filter;
+        // match
+        if ((substr($string, 0, 2) === 'm/') or 
+            (substr($string, 0, 2) === 'm#')) {
+            $quote = substr($string,1,1);
+            list($regex, $index) = explode($quote, substr($string, 2));
+            $index = (int) $index;
+
+            $filter = function ($var) use ($quote, $regex, $index) {
+                preg_match($quote.$regex.$quote, $var, $m);
+                if (!$m) return '';
+                if (isset($m[$index])) return $m[$index];
+            };
+
+            return $filter;
+        }
+
+        //return $filter;
     }
 
     /**
