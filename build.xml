@@ -17,17 +17,25 @@
  <target name="zf2copy">
   <copy toDir="${basedir}/src">
    <fileset dir="${zf2}/library">
+    <include name="Zend/Registry.php" />
     <include name="Zend/Cache/**/*.php" />
     <include name="Zend/Console/**/*.php" />
-    <include name="Zend/Dom/**/*.php" />
+    <include name="Zend/Dom/Css2Xpath.php" />
     <include name="Zend/EventManager/**/*.php" />
     <include name="Zend/Http/**/*.php" />
-    <include name="Zend/Json/**/*.php" />
+    <include name="Zend/Json/Exception/*.php" />
+    <include name="Zend/Json/Exception.php" />
+    <include name="Zend/Json/Decoder.php" />
     <include name="Zend/Serializer/**/*.php" />
     <include name="Zend/Stdlib/**/*.php" />
     <include name="Zend/Loader/**/*.php" />
     <include name="Zend/Uri/**/*.php" />
-    <include name="Zend/Validator/**/*.php" />
+    <include name="Zend/Validator/Validator.php" />
+    <include name="Zend/Validator/AbstractValidator.php" />
+    <include name="Zend/Validator/Hostname.php" />
+    <include name="Zend/Validator/Hostname/**/*.php" />
+    <include name="Zend/Validator/Ip.php" />
+    <include name="Zend/Validator/Exception/**/*.php" />
    </fileset>
   </copy>
  </target>
