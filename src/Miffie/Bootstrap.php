@@ -38,20 +38,45 @@ class Bootstrap
                         'methods' => array(
                             'factory' => array('cfg' => array('required' => true, 'type' => false))
                         )
-                    )
+                    ),
+                    'Diggin\Service\Wedata\Api\ZF2Client' => array(
+                        'methods' => array(
+                            'setHttpClient' => array('client' => array('required' => true, 'type' => 'Zend\Http\Client'))
+                        )
+                    ),
+                    'Diggin\Service\Wedata\Storage\Cache' => array(
+                        'methods' => array(
+                            'setSearchItemDataIgnore' => array(
+                                'callback' => array('required' => true, 'type' => 'Closure')
+                            )
+                        )
+                    ),
                 ),
             ),
             'instance' => array(
                 'alias' => array(
+                    'client' => 'Zend\Http\Client',
                     'cache' => 'Zend\Cache\Storage\Adapter',
+                    //'queue'
+                    //'logger'
                     'scraper' => 'Diggin\Scraper\Scraper',
-                    'wedata-storage' => 'Diggin\Service\Wedata\Storage\Cache'
+                    'wedata-api' => 'Diggin\Service\Wedata\Api\ZF2Client',
+                    'wedata-storage' => 'Diggin\Service\Wedata\Storage\Cache',
+                ),
+                'wedata-api' => array(
+                    'injections' => array('client')
                 ),
                 'cache' => array(
                     'parameters' => array('cfg' => array(
                         'adapter' => 'Memory'
                     ))
-                )
+                ),
+                'wedata-storage' => array(
+                    'parameters' => array(
+                        'cacheStorage' => 'cache'
+                    ),
+                    //'injections' => array(function(){})
+                ),
             )
         ));
 
