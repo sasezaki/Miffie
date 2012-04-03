@@ -1,7 +1,8 @@
 <?php
 namespace Miffie;
 
-use Miffie\GetoptExt,
+use InvalidArgumentException,
+    Miffie\GetoptExt,
     Miffie\Spider,
     Zend\Di\Locator;
 
@@ -21,13 +22,12 @@ class Runner
 
     public function run()
     {
-
         try {
             $getopt = static::getOpt();
             $options = $getopt->getOptionVars();
             $remain = $getopt->getRemainingArgs();
             if (count($remain) === 0) {
-                throw new \InvalidArgumentException('URL is not set');
+                throw new InvalidArgumentException('URL is not set');
             } elseif ($remain[0] === '-'){
                 if ($pipe = stream_get_contents(STDIN)) {
                     $urls = array_filter(explode(PHP_EOL, $pipe));
@@ -37,30 +37,18 @@ class Runner
             }
 
             $runner = new Spider($options);
+            $runner->setLocator($this->locator);
 
             foreach ($urls as $url) {
                 $runner->run($url);
             }
-        } catch (\InvalidArgumentException $iae){
+        } catch (InvalidArgumentException $iae){
             echo $iae->getMessage(), PHP_EOL;
             echo $getopt->getUsageMessage();
             echo '', PHP_EOL;
             echo '// example..', PHP_EOL;
             echo '$php miffie.phar -x img -v @src http://example.com/', PHP_EOL;
         }
-    }
-
-    public static function setupAutoPagerize()
-    {
-        $spider = new Spider(array());
-        $spider->setupAutoPagerize();
-    }
-
-    public static function testSearchAutoPagerize($url)
-    {
-        $spider = new Spider(array());
-        $storage = $spider->getWedataStorage();
-        var_dump($storage->searchItemData('AutoPagerize', 'url', $url));
     }
 
     public static function getOpt()
