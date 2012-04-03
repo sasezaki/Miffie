@@ -55,7 +55,7 @@ class Miffie
         // detect settings
         $this->_mode             = $this->_detectMode();
         $this->_homeDirectory    = $this->_detectHomeDirectory();
-        $this->_storageDirectory = $this->_detectStorageDirectory();
+        //$this->_storageDirectory = $this->_detectStorageDirectory();
         $this->_configFile       = $this->_detectConfigFile();
         
         // setup
@@ -123,9 +123,6 @@ class Miffie
         } elseif ($arguments[0] == '--info') {
             $mode = 'runInfo';
         } 
-        //elseif ($arguments[0] == '--autopagerize') {
-        //    $mode = 'autopagerize';
-        //}
         
         return $mode;
     }
@@ -269,6 +266,7 @@ class Miffie
             }
         }
         
+        /**
         $storageDirectory = ($this->_storageDirectory) ? $this->_storageDirectory : $this->_detectStorageDirectory(true, false);
         if ($storageDirectory) {
             $configFile = $storageDirectory . '/miffie.php';
@@ -278,7 +276,7 @@ class Miffie
             } else {
                 $this->_logMessage('Config file does not exist at ' . $configFile, $returnMessages);
             }
-        }
+        }*/
         
         return false;
     }
@@ -441,10 +439,9 @@ EOS;
         
         $includePath = get_include_path();
         
-        //$contents = 'php.include_path = "' . $includePath . '"';
-        $contents = <<<'EOF'
+        $contents = <<<EOF
 <?php
-$config = array(
+\$config = array(
     // 'php' => array( // php.ini setting
     //     'include_path' => 
     // );
@@ -459,7 +456,7 @@ $config = array(
     // 'di'  => array();
 );
 
-return $config;
+return \$config;
 
 EOF;
         
@@ -485,7 +482,7 @@ EOF;
     protected function _runSetupMoreInfo()
     {
         $homeDirectory    = $this->_detectHomeDirectory(false, false);
-        $storageDirectory = $this->_detectStorageDirectory(false, false);
+        //$storageDirectory = $this->_detectStorageDirectory(false, false);
         $configFile       = $this->_detectConfigFile(false, false);
         
         echo <<<EOS
@@ -495,16 +492,11 @@ miffie Command Line Tool - Setup
         
 Current Paths (Existing or not):
     Home Directory: {$homeDirectory}
-    Storage Directory: {$storageDirectory}
     Config File: {$configFile}
 
 Important Environment Variables:
     MIFFIE_HOME 
         - the directory this tool will look for a home directory
-        - directory must exist
-    MIFFIE_STORAGE_DIRECTORY 
-        - where this tool will look for a storage directory
-        - directory must exist
     MIFFIE_CONFIG_FILE 
         - where this tool will look for a configuration file
     MIFFIE_INCLUDE_PATH
@@ -515,38 +507,38 @@ Important Environment Variables:
 Search Order:
     Home Directory:
         - MIFFIE_HOME, then HOME (*nix), then HOMEPATH (windows)
-    Storage Directory:
-        - MIFFIE_STORAGE_DIR, then {home}/.miffie/
     Config File:
         - MIFFIE_CONFIG_FILE, then {home}/.miffie.php, then {home}/miffie.php,
           then {storage}/miffie.php
 
 Commands:
-    miffie --setup storage-directory
-        - setup the storage directory, directory will be created
     miffie --setup config-file
         - create the config file with some default values
     miffie --setup autopagerize
         - setup autopagerize data from wedata
-
+    miffie --setup directory
+        - setup the storage directory, directory will be created
 
 EOS;
     }
 
     protected function _runSetupAutopagerize()
     {
-        if (!$this->_configFile) {
+        if (!isset($this->_configFile) || !$this->_configFile) {
             echo '**setup autopagerize require Config file**', PHP_EOL;
             $this->_runSetupMoreInfo();
             return;
         }
 
         $runner = new Miffie\Runner;
-        $this->_bootstrapRunner($runner);
 
         $config = Zend\Config\Factory::fromFile($this->_configFile, true);
-        //var_dump($runner->getLocator()->get('cache', ($config->cache) ? array('cfg' => $config->cache):array()));
+        $bootstrap = new Miffie\Bootstrap($config);
+        $bootstrap->bootstrap($runner);
 
+        //$cache = 
+
+        //var_dump($runner->getLocator()->get('cache', ($config->cache) ? array('cfg' => $config->cache):array()));
     }
     
     /**
@@ -557,10 +549,17 @@ EOS;
     protected function _runCLI()
     {
         $runner = new Miffie\Runner;
-        $this->_bootstrapRunner($runner);
+        if (isset($this->_configFile) && $this->_configFile) {
+            $config = Zend\Config\Factory::fromFile($this->_configFile, true);
+            $bootstrap = new Miffie\Bootstrap($config);
+            $bootstrap->bootstrap($runner);
+        }
         $runner->run();
     }
 
+    /**
+     * @deprecated
+     */
     protected function _bootstrapRunner($runner)
     {
         $configOptions = array();
@@ -595,8 +594,6 @@ EOS;
         
         $this->_messages[] = $message;
     }
-    
-    
 }
 
 if (!getenv('MIFFIE_NO_MAIN')) {
