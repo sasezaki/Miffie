@@ -10,7 +10,6 @@ use Zend\Cache\StorageFactory,
     Zend\Http\Response,
     Diggin\Scraper\Scraper,
     Diggin\Scraper\Process as ScraperProcess,
-    Diggin\Service\Wedata\Api\ZF2Client as WedataApi,
     Diggin\Service\Wedata\Storage\Cache as WedataStorage;
 
 class Spider
@@ -43,12 +42,12 @@ class Spider
 
     public function setLocator(Locator $locator)
     {
-    	$this->locator = $locator;
+        $this->locator = $locator;
     }
 
     public function getLocator()
     {
-    	return $this->locator;
+        return $this->locator;
     }
 
     public function run($url)
@@ -69,9 +68,8 @@ class Spider
 
             $client->setUri($url);
 
-            // is 
+            // lazy check, is http or local ?
             $urlparts = parse_url($url);
-            
 
             if (isset($urlparts['scheme'])) {
                 if (isset($opt['cache']) && !isset($opt['noCache'])) {
@@ -85,9 +83,9 @@ class Spider
 
             if ($doNext && !isset($opt['nextlink'])){
                 //searching wedata
-               $nextLink = $this->searchNextLinkFromWedata($url) ;
+                $nextLink = $this->searchNextLinkFromWedata($url) ;
             } else if ($doNext && isset($opt['nextlink'])) {
-               $nextLink = $opt['nextlink'];
+                $nextLink = $opt['nextlink'];
             }
             
             $scraper = new Scraper();
@@ -154,16 +152,6 @@ class Spider
             }
         }
         loop_exit:
-    }
-
-    public function setupAutoPagerize()
-    {
-        $wedataStorage = $this->getWedataStorage();
-        $wedata = new WedataApi;
-        //$wedata->setHttpClient($this->getHttpClient());
-        $items = $wedata->getItems('AutoPagerize', null);
-
-        return $wedataStorage->storeItems('AutoPagerize', $items);
     }
 
     public function init()
@@ -316,11 +304,10 @@ FUNC
         if (!$httpResponseString = $this->getCacheStorage()->getItem($key)) {
             $httpResponse = $this->getHttpClient()->send();
             $this->getCacheStorage()->setItem($key, $httpResponseString = $httpResponse->toString());
+            return $httpResponse;
         }
         
-        $res = Response::fromstring($httpResponseString);
-
-        return $res;
+        return Response::fromstring($httpResponseString);
     }
 
     /* Event handling */
