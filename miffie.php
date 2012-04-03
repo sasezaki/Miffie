@@ -83,9 +83,6 @@ class Miffie
             case 'runInfo':
                 $this->_runInfo();
                 break;
-            case 'runAutopagerize':
-                $this->_runAutopagerize();
-                break;
             case 'runCLI':
             default:
                 $this->_runCLI();
@@ -535,10 +532,21 @@ EOS;
         $config = Zend\Config\Factory::fromFile($this->_configFile, true);
         $bootstrap = new Miffie\Bootstrap($config);
         $bootstrap->bootstrap($runner);
+        $locator = $runner->getLocator();
 
-        //$cache = 
+        $client = $locator->get('client');
+        //$client->setUri('http://example.com');
 
-        //var_dump($runner->getLocator()->get('cache', ($config->cache) ? array('cfg' => $config->cache):array()));
+        $wedataApi = $locator->get('wedata-api');
+        $wedataStorage = $locator->get('wedata-storage');
+
+        var_dump($wedataStorage);
+        //$wedataApi->setHttpClient($locator->get('client'));
+
+        return;
+
+        $items = $wedataApi->getItems('AutoPagerize', null); //get all items
+        $wedataStorage->storeItems('AutoPagerize', $items);
     }
     
     /**
