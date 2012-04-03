@@ -1,10 +1,13 @@
 <?php
 namespace Miffie;
 
-use Zend\Http\Client,
-    Zend\Http\Response,
-    Zend\Cache\StorageFactory,
+use Zend\Cache\StorageFactory,
     Zend\Cache\Storage\Adapter as CacheStorage,
+    Zend\Di\Locator,
+    Zend\EventManager\EventCollection,
+    Zend\EventManager\EventManager,
+    Zend\Http\Client,
+    Zend\Http\Response,
     Diggin\Scraper\Scraper,
     Diggin\Scraper\Process as ScraperProcess,
     Diggin\Service\Wedata\Api\ZF2Client as WedataApi,
@@ -12,6 +15,13 @@ use Zend\Http\Client,
 
 class Spider
 {
+    /**
+     * @var null|EventManager
+     */
+    protected $events;
+
+    protected $locator;
+
     protected $options;
 
     protected $httpClient;
@@ -29,6 +39,16 @@ class Spider
     public function __construct($options = array())
     {
         $this->options = $options;
+    }
+
+    public function setLocator(Locator $locator)
+    {
+    	$this->locator = $locator;
+    }
+
+    public function getLocator()
+    {
+    	return $this->locator;
     }
 
     public function run($url)
@@ -294,12 +314,101 @@ FUNC
     {
         $key = md5($this->getHttpClient()->getRequest());
         if (!$httpResponseString = $this->getCacheStorage()->getItem($key)) {
-            $httpResponse = $this->getHttpClient()->send();     
+            $httpResponse = $this->getHttpClient()->send();
             $this->getCacheStorage()->setItem($key, $httpResponseString = $httpResponse->toString());
         }
         
         $res = Response::fromstring($httpResponseString);
 
         return $res;
+    }
+
+    /* Event handling */
+
+    /**
+     * Set event manager instance
+     *
+     * @param  EventCollection $events
+     * @return AbstractAdapter
+     */
+    public function setEventManager(EventCollection $events)
+    {
+        $this->events = $events;
+        return $this;
+    }
+
+    /**
+     * Get the event manager
+     *
+     * @return EventManager
+     */
+    public function events()
+    {
+        if ($this->events === null) {
+            $this->setEventManager(new EventManager(array(
+                __CLASS__,
+                get_called_class(),
+            )));
+        }
+        return $this->events;
+    }
+
+    /**
+     * Trigger an pre event and return the event response collection
+     *
+     * @param  string $eventName
+     * @param  ArrayObject $args
+     * @return \Zend\EventManager\ResponseCollection All handler return values
+     */
+    protected function triggerPre($eventName, ArrayObject $args)
+    {
+        return $this->events()->trigger(new Event($eventName . '.pre', $this, $args));
+    }
+
+    /**
+     * Triggers the PostEvent and return the result value.
+     *
+     * @param  string $eventName
+     * @param  ArrayObject $args
+     * @param  mixed $result
+     * @return mixed
+     */
+    protected function triggerPost($eventName, ArrayObject $args, &$result)
+    {
+        $postEvent = new PostEvent($eventName . '.post', $this, $args, $result);
+        $eventRs   = $this->events()->trigger($postEvent);
+        if ($eventRs->stopped()) {
+            return $eventRs->last();
+        }
+
+        return $postEvent->getResult();
+    }
+
+    /**
+     * Trigger an exception event
+     *
+     * If the ExceptionEvent has the flag "throwException" enabled throw the
+     * exception after trigger else return the result.
+     *
+     * @param  string $eventName
+     * @param  ArrayObject $args
+     * @param  \Exception $exception
+     * @throws Exception
+     * @return mixed
+     */
+    protected function triggerException($eventName, ArrayObject $args, \Exception $exception)
+    {
+        $exceptionEvent = new ExceptionEvent($eventName . '.exception', $this, $args, $exception);
+        $eventRs        = $this->events()->trigger($exceptionEvent);
+
+        if ($exceptionEvent->getThrowException()) {
+            throw $exceptionEvent->getException();
+        }
+
+        if ($eventRs->stopped()) {
+            return $eventRs->last();
+        }
+
+        return $exceptionEvent->getResult();
     }
 }

@@ -19,13 +19,17 @@
    <fileset dir="${zf2}/library">
     <include name="Zend/Registry.php" />
     <include name="Zend/Cache/**/*.php" />
+    <include name="Zend/Code/**/*.php" />
+    <include name="Zend/Config/**/*.php" />
     <include name="Zend/Console/**/*.php" />
+    <include name="Zend/Di/**/*.php" />
     <include name="Zend/Dom/Css2Xpath.php" />
     <include name="Zend/EventManager/**/*.php" />
     <include name="Zend/Http/**/*.php" />
     <include name="Zend/Json/Exception/*.php" />
     <include name="Zend/Json/Exception.php" />
     <include name="Zend/Json/Decoder.php" />
+    <include name="Zend/Log/**/*.php" />
     <include name="Zend/Serializer/**/*.php" />
     <include name="Zend/Stdlib/**/*.php" />
     <include name="Zend/Loader/**/*.php" />
@@ -71,6 +75,12 @@
 
  </target>
 
+ <target name="patch">
+    <patch
+     patchfile="/home/kazusuke/diggin/Miffie/response_isheader_checking.patch"
+     dir="${zf2}"/>
+ </target>
+
  <target name="strip">
     <stripforphar dir="./src/Diggin" />
     <stripforphar dir="./src/Zend" />
@@ -85,5 +95,5 @@
   <delete dir="${basedir}/src/Zend" />
   <delete dir="${basedir}/src/Diggin" />
  </target>
- <target name="build" depends="clean, zf2copy, diggincopy, strip, phar" />
+ <target name="build" depends="clean, patch, zf2copy, diggincopy, strip, phar" />
 </project>
