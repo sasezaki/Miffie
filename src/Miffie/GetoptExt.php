@@ -8,7 +8,7 @@ class GetoptExt extends Getopt
     public function getOptionVars()
     {
         $this->parse();
-        return $this->_options;
+        return $this->options;
     }
 }
 

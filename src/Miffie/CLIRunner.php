@@ -77,7 +77,7 @@ class CLIRunner
            'out|o=i' => 'timeout',
        'baseurl|p=s' => 'baseurl path',
         'helper|l=s' => 'helper method'
-      )
+            )
         );
 
     }
