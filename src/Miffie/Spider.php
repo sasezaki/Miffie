@@ -296,10 +296,9 @@ FUNC
         if (!$httpResponseString = $this->getCacheStorage()->getItem($key)) {
             $httpResponse = $this->getHttpClient()->send();     
             $this->getCacheStorage()->setItem($key, $httpResponseString = $httpResponse->toString());
+            return $httpResponse;
         }
         
-        $res = Response::fromstring($httpResponseString);
-
-        return $res;
+        return Response::fromstring($httpResponseString);
     }
 }

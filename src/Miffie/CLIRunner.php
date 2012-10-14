@@ -76,7 +76,7 @@ class CLIRunner
         'filter|f=s' => 'filter for Diggin\Scraper',
            'out|o=i' => 'timeout',
        'baseurl|p=s' => 'baseurl path',
-        'helper|l=s' => 'helper'
+        'helper|l=s' => 'helper method'
       )
         );
 

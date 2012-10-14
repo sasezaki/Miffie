@@ -11,7 +11,7 @@
   <active>yes</active>
  </lead>
  <date>2012-10-14</date>
- <time>15:18:38</time>
+ <time>15:31:13</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -50,6 +50,7 @@ Package Miffie API release notes for version 0.1.0.</notes>
         <file role="php" name="PeclHttpMessageWrapper.php"/>
         <file role="php" name="Symfony2.php"/>
         <file role="php" name="ZF1Wrapper.php"/>
+        <file role="php" name="ZF2Wrapper.php"/>
        </dir>
        <file role="php" name="Converter.php"/>
        <file role="php" name="Exception.php"/>
@@ -169,14 +170,13 @@ Package Miffie API release notes for version 0.1.0.</notes>
      <dir name="Cache">
       <dir name="Exception">
        <file role="php" name="BadMethodCallException.php"/>
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="ExtensionNotLoadedException.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
-       <file role="php" name="ItemNotFoundException.php"/>
-       <file role="php" name="LockedException.php"/>
        <file role="php" name="LogicException.php"/>
        <file role="php" name="MissingDependencyException.php"/>
        <file role="php" name="MissingKeyException.php"/>
-       <file role="php" name="OutOfCapacityException.php"/>
+       <file role="php" name="OutOfSpaceException.php"/>
        <file role="php" name="RuntimeException.php"/>
        <file role="php" name="UnexpectedValueException.php"/>
        <file role="php" name="UnsupportedMethodCallException.php"/>
@@ -188,6 +188,7 @@ Package Miffie API release notes for version 0.1.0.</notes>
        <file role="php" name="ClassCache.php"/>
        <file role="php" name="ObjectCache.php"/>
        <file role="php" name="OutputCache.php"/>
+       <file role="php" name="PatternInterface.php"/>
        <file role="php" name="PatternOptions.php"/>
       </dir>
       <dir name="Storage">
@@ -196,9 +197,15 @@ Package Miffie API release notes for version 0.1.0.</notes>
         <file role="php" name="AbstractZendServer.php"/>
         <file role="php" name="AdapterOptions.php"/>
         <file role="php" name="Apc.php"/>
+        <file role="php" name="ApcIterator.php"/>
         <file role="php" name="ApcOptions.php"/>
+        <file role="php" name="Dba.php"/>
+        <file role="php" name="DbaIterator.php"/>
+        <file role="php" name="DbaOptions.php"/>
         <file role="php" name="Filesystem.php"/>
+        <file role="php" name="FilesystemIterator.php"/>
         <file role="php" name="FilesystemOptions.php"/>
+        <file role="php" name="KeyListIterator.php"/>
         <file role="php" name="Memcached.php"/>
         <file role="php" name="MemcachedOptions.php"/>
         <file role="php" name="Memory.php"/>
@@ -210,98 +217,154 @@ Package Miffie API release notes for version 0.1.0.</notes>
        </dir>
        <dir name="Plugin">
         <file role="php" name="AbstractPlugin.php"/>
-        <file role="php" name="ClearByFactor.php"/>
+        <file role="php" name="ClearExpiredByFactor.php"/>
         <file role="php" name="ExceptionHandler.php"/>
         <file role="php" name="IgnoreUserAbort.php"/>
         <file role="php" name="OptimizeByFactor.php"/>
+        <file role="php" name="PluginInterface.php"/>
         <file role="php" name="PluginOptions.php"/>
         <file role="php" name="Serializer.php"/>
        </dir>
-       <file role="php" name="Adapter.php"/>
-       <file role="php" name="AdapterBroker.php"/>
-       <file role="php" name="AdapterLoader.php"/>
+       <file role="php" name="AdapterPluginManager.php"/>
+       <file role="php" name="AvailableSpaceCapableInterface.php"/>
        <file role="php" name="Capabilities.php"/>
+       <file role="php" name="ClearByNamespaceInterface.php"/>
+       <file role="php" name="ClearByPrefixInterface.php"/>
+       <file role="php" name="ClearExpiredInterface.php"/>
        <file role="php" name="Event.php"/>
        <file role="php" name="ExceptionEvent.php"/>
-       <file role="php" name="Plugin.php"/>
-       <file role="php" name="PluginBroker.php"/>
-       <file role="php" name="PluginLoader.php"/>
+       <file role="php" name="FlushableInterface.php"/>
+       <file role="php" name="IterableInterface.php"/>
+       <file role="php" name="IteratorInterface.php"/>
+       <file role="php" name="OptimizableInterface.php"/>
+       <file role="php" name="PluginManager.php"/>
        <file role="php" name="PostEvent.php"/>
+       <file role="php" name="StorageInterface.php"/>
+       <file role="php" name="TaggableInterface.php"/>
+       <file role="php" name="TotalSpaceCapableInterface.php"/>
       </dir>
-      <file role="php" name="Exception.php"/>
-      <file role="php" name="Pattern.php"/>
-      <file role="php" name="PatternBroker.php"/>
       <file role="php" name="PatternFactory.php"/>
-      <file role="php" name="PatternLoader.php"/>
+      <file role="php" name="PatternPluginManager.php"/>
       <file role="php" name="StorageFactory.php"/>
-      <file role="php" name="Utils.php"/>
      </dir>
      <dir name="Console">
+      <dir name="Adapter">
+       <file role="php" name="AbstractAdapter.php"/>
+       <file role="php" name="AdapterInterface.php"/>
+       <file role="php" name="Posix.php"/>
+       <file role="php" name="Virtual.php"/>
+       <file role="php" name="Windows.php"/>
+       <file role="php" name="WindowsAnsicon.php"/>
+      </dir>
+      <dir name="Charset">
+       <file role="php" name="Ascii.php"/>
+       <file role="php" name="AsciiExtended.php"/>
+       <file role="php" name="CharsetInterface.php"/>
+       <file role="php" name="DECSG.php"/>
+       <file role="php" name="Utf8.php"/>
+       <file role="php" name="Utf8Heavy.php"/>
+      </dir>
       <dir name="Exception">
+       <file role="php" name="BadMethodCallException.php"/>
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
        <file role="php" name="RuntimeException.php"/>
       </dir>
-      <file role="php" name="Exception.php"/>
+      <dir name="Prompt">
+       <file role="php" name="AbstractPrompt.php"/>
+       <file role="php" name="Char.php"/>
+       <file role="php" name="Confirm.php"/>
+       <file role="php" name="Line.php"/>
+       <file role="php" name="Number.php"/>
+       <file role="php" name="PromptInterface.php"/>
+       <file role="php" name="Select.php"/>
+      </dir>
+      <file role="php" name="ColorInterface.php"/>
+      <file role="php" name="Console.php"/>
       <file role="php" name="Getopt.php"/>
+      <file role="php" name="Request.php"/>
+      <file role="php" name="Response.php"/>
      </dir>
      <dir name="Dom">
       <file role="php" name="Css2Xpath.php"/>
      </dir>
      <dir name="EventManager">
       <dir name="Exception">
+       <file role="php" name="DomainException.php"/>
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
+       <file role="php" name="InvalidCallbackException.php"/>
       </dir>
       <dir name="Filter">
+       <file role="php" name="FilterInterface.php"/>
        <file role="php" name="FilterIterator.php"/>
       </dir>
       <file role="php" name="Event.php"/>
-      <file role="php" name="EventCollection.php"/>
-      <file role="php" name="EventDescription.php"/>
+      <file role="php" name="EventInterface.php"/>
       <file role="php" name="EventManager.php"/>
-      <file role="php" name="Exception.php"/>
-      <file role="php" name="Filter.php"/>
+      <file role="php" name="EventManagerAwareInterface.php"/>
+      <file role="php" name="EventManagerInterface.php"/>
+      <file role="php" name="EventsCapableInterface.php"/>
       <file role="php" name="FilterChain.php"/>
       <file role="php" name="GlobalEventManager.php"/>
-      <file role="php" name="ListenerAggregate.php"/>
+      <file role="php" name="ListenerAggregateInterface.php"/>
       <file role="php" name="ProvidesEvents.php"/>
       <file role="php" name="ResponseCollection.php"/>
-      <file role="php" name="StaticEventCollection.php"/>
+      <file role="php" name="SharedEventManager.php"/>
+      <file role="php" name="SharedEventManagerAwareInterface.php"/>
+      <file role="php" name="SharedEventManagerInterface.php"/>
       <file role="php" name="StaticEventManager.php"/>
      </dir>
      <dir name="Http">
       <dir name="Client">
        <dir name="Adapter">
         <dir name="Exception">
+         <file role="php" name="ExceptionInterface.php"/>
          <file role="php" name="InitializationException.php"/>
          <file role="php" name="InvalidArgumentException.php"/>
          <file role="php" name="OutOfRangeException.php"/>
          <file role="php" name="RuntimeException.php"/>
          <file role="php" name="TimeoutException.php"/>
         </dir>
+        <file role="php" name="AdapterInterface.php"/>
         <file role="php" name="Curl.php"/>
-        <file role="php" name="Exception.php"/>
         <file role="php" name="Proxy.php"/>
         <file role="php" name="Socket.php"/>
-        <file role="php" name="Stream.php"/>
+        <file role="php" name="StreamInterface.php"/>
         <file role="php" name="Test.php"/>
        </dir>
        <dir name="Exception">
+        <file role="php" name="ExceptionInterface.php"/>
         <file role="php" name="InvalidArgumentException.php"/>
+        <file role="php" name="OutOfRangeException.php"/>
         <file role="php" name="RuntimeException.php"/>
        </dir>
-       <file role="php" name="Adapter.php"/>
        <file role="php" name="Cookies.php"/>
-       <file role="php" name="Exception.php"/>
       </dir>
       <dir name="Exception">
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
+       <file role="php" name="OutOfRangeException.php"/>
        <file role="php" name="RuntimeException.php"/>
       </dir>
       <dir name="Header">
+       <dir name="Accept">
+        <dir name="FieldValuePart">
+         <file role="php" name="AbstractFieldValuePart.php"/>
+         <file role="php" name="AcceptFieldValuePart.php"/>
+         <file role="php" name="CharsetFieldValuePart.php"/>
+         <file role="php" name="EncodingFieldValuePart.php"/>
+         <file role="php" name="LanguageFieldValuePart.php"/>
+        </dir>
+       </dir>
        <dir name="Exception">
+        <file role="php" name="ExceptionInterface.php"/>
         <file role="php" name="InvalidArgumentException.php"/>
         <file role="php" name="RuntimeException.php"/>
        </dir>
+       <file role="php" name="AbstractAccept.php"/>
+       <file role="php" name="AbstractDate.php"/>
+       <file role="php" name="AbstractLocation.php"/>
        <file role="php" name="Accept.php"/>
        <file role="php" name="AcceptCharset.php"/>
        <file role="php" name="AcceptEncoding.php"/>
@@ -324,13 +387,12 @@ Package Miffie API release notes for version 0.1.0.</notes>
        <file role="php" name="Cookie.php"/>
        <file role="php" name="Date.php"/>
        <file role="php" name="Etag.php"/>
-       <file role="php" name="Exception.php"/>
        <file role="php" name="Expect.php"/>
        <file role="php" name="Expires.php"/>
        <file role="php" name="From.php"/>
        <file role="php" name="GenericHeader.php"/>
        <file role="php" name="GenericMultiHeader.php"/>
-       <file role="php" name="HeaderDescription.php"/>
+       <file role="php" name="HeaderInterface.php"/>
        <file role="php" name="Host.php"/>
        <file role="php" name="IfMatch.php"/>
        <file role="php" name="IfModifiedSince.php"/>
@@ -341,7 +403,7 @@ Package Miffie API release notes for version 0.1.0.</notes>
        <file role="php" name="LastModified.php"/>
        <file role="php" name="Location.php"/>
        <file role="php" name="MaxForwards.php"/>
-       <file role="php" name="MultipleHeaderDescription.php"/>
+       <file role="php" name="MultipleHeaderInterface.php"/>
        <file role="php" name="Pragma.php"/>
        <file role="php" name="ProxyAuthenticate.php"/>
        <file role="php" name="ProxyAuthorization.php"/>
@@ -368,27 +430,30 @@ Package Miffie API release notes for version 0.1.0.</notes>
       <dir name="Response">
        <file role="php" name="Stream.php"/>
       </dir>
+      <file role="php" name="AbstractMessage.php"/>
       <file role="php" name="Client.php"/>
       <file role="php" name="ClientStatic.php"/>
       <file role="php" name="Cookies.php"/>
-      <file role="php" name="Exception.php"/>
+      <file role="php" name="HeaderLoader.php"/>
       <file role="php" name="Headers.php"/>
       <file role="php" name="Request.php"/>
       <file role="php" name="Response.php"/>
      </dir>
      <dir name="Json">
       <dir name="Exception">
+       <file role="php" name="BadMethodCallException.php"/>
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
        <file role="php" name="RecursionException.php"/>
        <file role="php" name="RuntimeException.php"/>
       </dir>
       <file role="php" name="Decoder.php"/>
-      <file role="php" name="Exception.php"/>
      </dir>
      <dir name="Loader">
       <dir name="Exception">
        <file role="php" name="BadMethodCallException.php"/>
        <file role="php" name="DomainException.php"/>
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
        <file role="php" name="InvalidPathException.php"/>
        <file role="php" name="MissingResourceNamespaceException.php"/>
@@ -397,19 +462,10 @@ Package Miffie API release notes for version 0.1.0.</notes>
        <file role="php" name="SecurityException.php"/>
       </dir>
       <file role="php" name="AutoloaderFactory.php"/>
-      <file role="php" name="Broker.php"/>
       <file role="php" name="ClassMapAutoloader.php"/>
-      <file role="php" name="Exception.php"/>
-      <file role="php" name="LazyLoadingBroker.php"/>
-      <file role="php" name="LocatorAware.php"/>
       <file role="php" name="ModuleAutoloader.php"/>
-      <file role="php" name="Pluggable.php"/>
-      <file role="php" name="PluginBroker.php"/>
       <file role="php" name="PluginClassLoader.php"/>
       <file role="php" name="PluginClassLocator.php"/>
-      <file role="php" name="PluginSpecBroker.php"/>
-      <file role="php" name="PrefixPathLoader.php"/>
-      <file role="php" name="PrefixPathMapper.php"/>
       <file role="php" name="ShortNameLocator.php"/>
       <file role="php" name="SplAutoloader.php"/>
       <file role="php" name="StandardAutoloader.php"/>
@@ -417,75 +473,92 @@ Package Miffie API release notes for version 0.1.0.</notes>
      <dir name="Serializer">
       <dir name="Adapter">
        <file role="php" name="AbstractAdapter.php"/>
-       <file role="php" name="Amf0.php"/>
-       <file role="php" name="Amf3.php"/>
+       <file role="php" name="AdapterInterface.php"/>
+       <file role="php" name="AdapterOptions.php"/>
        <file role="php" name="IgBinary.php"/>
        <file role="php" name="Json.php"/>
+       <file role="php" name="JsonOptions.php"/>
        <file role="php" name="PhpCode.php"/>
        <file role="php" name="PhpSerialize.php"/>
        <file role="php" name="PythonPickle.php"/>
+       <file role="php" name="PythonPickleOptions.php"/>
        <file role="php" name="Wddx.php"/>
+       <file role="php" name="WddxOptions.php"/>
       </dir>
       <dir name="Exception">
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="ExtensionNotLoadedException.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
        <file role="php" name="RuntimeException.php"/>
       </dir>
-      <file role="php" name="Adapter.php"/>
-      <file role="php" name="AdapterBroker.php"/>
-      <file role="php" name="AdapterLoader.php"/>
-      <file role="php" name="Exception.php"/>
+      <file role="php" name="AdapterPluginManager.php"/>
       <file role="php" name="Serializer.php"/>
      </dir>
      <dir name="Stdlib">
       <dir name="Exception">
        <file role="php" name="BadMethodCallException.php"/>
        <file role="php" name="DomainException.php"/>
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
        <file role="php" name="InvalidCallbackException.php"/>
        <file role="php" name="LogicException.php"/>
       </dir>
+      <dir name="Hydrator">
+       <dir name="Strategy">
+        <file role="php" name="DefaultStrategy.php"/>
+        <file role="php" name="StrategyInterface.php"/>
+       </dir>
+       <file role="php" name="AbstractHydrator.php"/>
+       <file role="php" name="ArraySerializable.php"/>
+       <file role="php" name="ClassMethods.php"/>
+       <file role="php" name="HydratorInterface.php"/>
+       <file role="php" name="ObjectProperty.php"/>
+       <file role="php" name="Reflection.php"/>
+       <file role="php" name="StrategyEnabledInterface.php"/>
+      </dir>
+      <file role="php" name="AbstractOptions.php"/>
+      <file role="php" name="ArraySerializableInterface.php"/>
       <file role="php" name="ArrayStack.php"/>
+      <file role="php" name="ArrayUtils.php"/>
       <file role="php" name="CallbackHandler.php"/>
-      <file role="php" name="Dispatchable.php"/>
+      <file role="php" name="DispatchableInterface.php"/>
       <file role="php" name="ErrorHandler.php"/>
-      <file role="php" name="Exception.php"/>
-      <file role="php" name="IsAssocArray.php"/>
-      <file role="php" name="IteratorToArray.php"/>
+      <file role="php" name="Glob.php"/>
       <file role="php" name="Message.php"/>
-      <file role="php" name="MessageDescription.php"/>
-      <file role="php" name="Options.php"/>
-      <file role="php" name="ParameterObject.php"/>
+      <file role="php" name="MessageInterface.php"/>
+      <file role="php" name="ParameterObjectInterface.php"/>
       <file role="php" name="Parameters.php"/>
-      <file role="php" name="ParametersDescription.php"/>
+      <file role="php" name="ParametersInterface.php"/>
       <file role="php" name="PriorityQueue.php"/>
       <file role="php" name="Request.php"/>
-      <file role="php" name="RequestDescription.php"/>
+      <file role="php" name="RequestInterface.php"/>
       <file role="php" name="Response.php"/>
-      <file role="php" name="ResponseDescription.php"/>
+      <file role="php" name="ResponseInterface.php"/>
       <file role="php" name="SplPriorityQueue.php"/>
       <file role="php" name="SplQueue.php"/>
       <file role="php" name="SplStack.php"/>
      </dir>
      <dir name="Uri">
       <dir name="Exception">
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
        <file role="php" name="InvalidUriException.php"/>
        <file role="php" name="InvalidUriPartException.php"/>
-       <file role="php" name="InvalidUriTypeException.php"/>
       </dir>
-      <file role="php" name="Exception.php"/>
       <file role="php" name="File.php"/>
       <file role="php" name="Http.php"/>
       <file role="php" name="Mailto.php"/>
       <file role="php" name="Uri.php"/>
       <file role="php" name="UriFactory.php"/>
+      <file role="php" name="UriInterface.php"/>
      </dir>
      <dir name="Validator">
       <dir name="Exception">
        <file role="php" name="BadMethodCallException.php"/>
+       <file role="php" name="ExceptionInterface.php"/>
        <file role="php" name="ExtensionNotLoadedException.php"/>
        <file role="php" name="InvalidArgumentException.php"/>
+       <file role="php" name="InvalidMagicMimeFileException.php"/>
        <file role="php" name="RuntimeException.php"/>
       </dir>
       <dir name="Hostname">
@@ -497,7 +570,6 @@ Package Miffie API release notes for version 0.1.0.</notes>
       <file role="php" name="AbstractValidator.php"/>
       <file role="php" name="Hostname.php"/>
       <file role="php" name="Ip.php"/>
-      <file role="php" name="Validator.php"/>
      </dir>
     </dir>
    </dir>
