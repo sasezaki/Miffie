@@ -17,7 +17,6 @@
  <target name="zf2copy">
   <copy toDir="${basedir}/src">
    <fileset dir="${zf2}/library">
-    <include name="Zend/Registry.php" />
     <include name="Zend/Cache/**/*.php" />
     <include name="Zend/Console/**/*.php" />
     <include name="Zend/Dom/Css2Xpath.php" />

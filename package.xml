@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
  <name>Miffie</name>
- <channel>pear.diggin.musicrider.com</channel>
+ <channel>__uri</channel>
  <summary>Package Miffie summary.\n\n&quot; . &quot;Package detailed description here (found in README)</summary>
  <description>Scraping toolkit</description>
  <lead>
@@ -10,8 +10,8 @@
   <email>sasezaki@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2012-03-31</date>
- <time>01:19:56</time>
+ <date>2012-10-14</date>
+ <time>15:18:38</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -161,7 +161,6 @@ Package Miffie API release notes for version 0.1.0.</notes>
      </dir>
     </dir>
     <dir name="Miffie">
-     <file role="php" name="Autoload.php"/>
      <file role="php" name="CLIRunner.php"/>
      <file role="php" name="GetoptExt.php"/>
      <file role="php" name="Spider.php"/>
@@ -303,7 +302,6 @@ Package Miffie API release notes for version 0.1.0.</notes>
         <file role="php" name="InvalidArgumentException.php"/>
         <file role="php" name="RuntimeException.php"/>
        </dir>
-       <file role="php" name="AbstractAccept.php"/>
        <file role="php" name="Accept.php"/>
        <file role="php" name="AcceptCharset.php"/>
        <file role="php" name="AcceptEncoding.php"/>
@@ -448,11 +446,12 @@ Package Miffie API release notes for version 0.1.0.</notes>
        <file role="php" name="LogicException.php"/>
       </dir>
       <file role="php" name="ArrayStack.php"/>
-      <file role="php" name="ArrayUtils.php"/>
       <file role="php" name="CallbackHandler.php"/>
       <file role="php" name="Dispatchable.php"/>
       <file role="php" name="ErrorHandler.php"/>
       <file role="php" name="Exception.php"/>
+      <file role="php" name="IsAssocArray.php"/>
+      <file role="php" name="IteratorToArray.php"/>
       <file role="php" name="Message.php"/>
       <file role="php" name="MessageDescription.php"/>
       <file role="php" name="Options.php"/>
@@ -500,7 +499,6 @@ Package Miffie API release notes for version 0.1.0.</notes>
       <file role="php" name="Ip.php"/>
       <file role="php" name="Validator.php"/>
      </dir>
-     <file role="php" name="Registry.php"/>
     </dir>
    </dir>
    <dir name="tests" baseinstalldir="/">

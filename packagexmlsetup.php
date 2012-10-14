@@ -5,7 +5,7 @@
  */
 
 $package->channel = $compatible->channel
-    = 'pear.diggin.musicrider.com';
+    = '__uri';
 $package->rawlead = $compatible->rawlead
     = array(
         'name' => 'sasezaki',
