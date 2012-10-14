@@ -20,8 +20,10 @@
     <include name="Zend/Cache/**/*.php" />
     <include name="Zend/Console/**/*.php" />
     <include name="Zend/Dom/Css2Xpath.php" />
+    <include name="Zend/Escaper/**/*.php" />
     <include name="Zend/EventManager/**/*.php" />
     <include name="Zend/Http/**/*.php" />
+    <include name="Zend/I18n/Translator/TranslatorAwareInterface.php" />
     <include name="Zend/Json/Exception/*.php" />
     <include name="Zend/Json/Exception.php" />
     <include name="Zend/Json/Decoder.php" />
@@ -29,7 +31,7 @@
     <include name="Zend/Stdlib/**/*.php" />
     <include name="Zend/Loader/**/*.php" />
     <include name="Zend/Uri/**/*.php" />
-    <include name="Zend/Validator/Validator.php" />
+    <include name="Zend/Validator/ValidatorInterface.php" />
     <include name="Zend/Validator/AbstractValidator.php" />
     <include name="Zend/Validator/Hostname.php" />
     <include name="Zend/Validator/Hostname/**/*.php" />

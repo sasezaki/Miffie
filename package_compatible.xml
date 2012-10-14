@@ -10,7 +10,7 @@
   <active>yes</active>
  </lead>
  <date>2012-10-14</date>
- <time>15:31:13</time>
+ <time>18:51:57</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -25,6 +25,7 @@
    <file role="test" name="test/__uri/Miffie/phpunit.xml"/>
    <file role="test" name="test/__uri/Miffie/Miffie/Miffie/SpiderTest.php"/>
    <file role="test" name="test/__uri/Miffie/bootstrap.php"/>
+   <file role="php" name="php/Zend/Validator/ValidatorInterface.php"/>
    <file role="php" name="php/Zend/Validator/Ip.php"/>
    <file role="php" name="php/Zend/Validator/Hostname/Jp.php"/>
    <file role="php" name="php/Zend/Validator/Hostname/Com.php"/>
@@ -125,6 +126,7 @@
    <file role="php" name="php/Zend/Json/Exception/ExceptionInterface.php"/>
    <file role="php" name="php/Zend/Json/Exception/BadMethodCallException.php"/>
    <file role="php" name="php/Zend/Json/Decoder.php"/>
+   <file role="php" name="php/Zend/I18n/Translator/TranslatorAwareInterface.php"/>
    <file role="php" name="php/Zend/Http/Response/Stream.php"/>
    <file role="php" name="php/Zend/Http/Response.php"/>
    <file role="php" name="php/Zend/Http/Request.php"/>
@@ -246,6 +248,10 @@
    <file role="php" name="php/Zend/EventManager/EventManager.php"/>
    <file role="php" name="php/Zend/EventManager/EventInterface.php"/>
    <file role="php" name="php/Zend/EventManager/Event.php"/>
+   <file role="php" name="php/Zend/Escaper/Exception/RuntimeException.php"/>
+   <file role="php" name="php/Zend/Escaper/Exception/InvalidArgumentException.php"/>
+   <file role="php" name="php/Zend/Escaper/Exception/ExceptionInterface.php"/>
+   <file role="php" name="php/Zend/Escaper/Escaper.php"/>
    <file role="php" name="php/Zend/Dom/Css2Xpath.php"/>
    <file role="php" name="php/Zend/Console/Response.php"/>
    <file role="php" name="php/Zend/Console/Request.php"/>
@@ -638,6 +644,10 @@
    <install name="php/Zend/Console/Request.php" as="Zend/Console/Request.php"/>
    <install name="php/Zend/Console/Response.php" as="Zend/Console/Response.php"/>
    <install name="php/Zend/Dom/Css2Xpath.php" as="Zend/Dom/Css2Xpath.php"/>
+   <install name="php/Zend/Escaper/Escaper.php" as="Zend/Escaper/Escaper.php"/>
+   <install name="php/Zend/Escaper/Exception/ExceptionInterface.php" as="Zend/Escaper/Exception/ExceptionInterface.php"/>
+   <install name="php/Zend/Escaper/Exception/InvalidArgumentException.php" as="Zend/Escaper/Exception/InvalidArgumentException.php"/>
+   <install name="php/Zend/Escaper/Exception/RuntimeException.php" as="Zend/Escaper/Exception/RuntimeException.php"/>
    <install name="php/Zend/EventManager/Event.php" as="Zend/EventManager/Event.php"/>
    <install name="php/Zend/EventManager/EventInterface.php" as="Zend/EventManager/EventInterface.php"/>
    <install name="php/Zend/EventManager/EventManager.php" as="Zend/EventManager/EventManager.php"/>
@@ -759,6 +769,7 @@
    <install name="php/Zend/Http/Request.php" as="Zend/Http/Request.php"/>
    <install name="php/Zend/Http/Response.php" as="Zend/Http/Response.php"/>
    <install name="php/Zend/Http/Response/Stream.php" as="Zend/Http/Response/Stream.php"/>
+   <install name="php/Zend/I18n/Translator/TranslatorAwareInterface.php" as="Zend/I18n/Translator/TranslatorAwareInterface.php"/>
    <install name="php/Zend/Json/Decoder.php" as="Zend/Json/Decoder.php"/>
    <install name="php/Zend/Json/Exception/BadMethodCallException.php" as="Zend/Json/Exception/BadMethodCallException.php"/>
    <install name="php/Zend/Json/Exception/ExceptionInterface.php" as="Zend/Json/Exception/ExceptionInterface.php"/>
@@ -859,6 +870,7 @@
    <install name="php/Zend/Validator/Hostname/Com.php" as="Zend/Validator/Hostname/Com.php"/>
    <install name="php/Zend/Validator/Hostname/Jp.php" as="Zend/Validator/Hostname/Jp.php"/>
    <install name="php/Zend/Validator/Ip.php" as="Zend/Validator/Ip.php"/>
+   <install name="php/Zend/Validator/ValidatorInterface.php" as="Zend/Validator/ValidatorInterface.php"/>
    <install name="test/__uri/Miffie/bootstrap.php" as="Miffie/bootstrap.php"/>
    <install name="test/__uri/Miffie/Miffie/Miffie/SpiderTest.php" as="Miffie/Miffie/Miffie/SpiderTest.php"/>
    <install name="test/__uri/Miffie/phpunit.xml" as="Miffie/phpunit.xml"/>

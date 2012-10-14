@@ -11,7 +11,7 @@
   <active>yes</active>
  </lead>
  <date>2012-10-14</date>
- <time>15:31:13</time>
+ <time>18:51:56</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -288,6 +288,14 @@ Package Miffie API release notes for version 0.1.0.</notes>
      <dir name="Dom">
       <file role="php" name="Css2Xpath.php"/>
      </dir>
+     <dir name="Escaper">
+      <dir name="Exception">
+       <file role="php" name="ExceptionInterface.php"/>
+       <file role="php" name="InvalidArgumentException.php"/>
+       <file role="php" name="RuntimeException.php"/>
+      </dir>
+      <file role="php" name="Escaper.php"/>
+     </dir>
      <dir name="EventManager">
       <dir name="Exception">
        <file role="php" name="DomainException.php"/>
@@ -439,6 +447,11 @@ Package Miffie API release notes for version 0.1.0.</notes>
       <file role="php" name="Request.php"/>
       <file role="php" name="Response.php"/>
      </dir>
+     <dir name="I18n">
+      <dir name="Translator">
+       <file role="php" name="TranslatorAwareInterface.php"/>
+      </dir>
+     </dir>
      <dir name="Json">
       <dir name="Exception">
        <file role="php" name="BadMethodCallException.php"/>
@@ -570,6 +583,7 @@ Package Miffie API release notes for version 0.1.0.</notes>
       <file role="php" name="AbstractValidator.php"/>
       <file role="php" name="Hostname.php"/>
       <file role="php" name="Ip.php"/>
+      <file role="php" name="ValidatorInterface.php"/>
      </dir>
     </dir>
    </dir>
