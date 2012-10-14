@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
  <name>Miffie</name>
- <channel>pear.diggin.musicrider.com</channel>
+ <channel>__uri</channel>
  <description>Scraping toolkit</description>
  <lead>
   <name>sasezaki</name>
@@ -9,8 +9,8 @@
   <email>sasezaki@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2012-03-31</date>
- <time>01:19:57</time>
+ <date>2012-10-14</date>
+ <time>15:18:39</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -22,9 +22,9 @@
  <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
  <contents>
   <dir name="/">
-   <file role="test" name="test/pear.diggin.musicrider.com/Miffie/phpunit.xml"/>
-   <file role="test" name="test/pear.diggin.musicrider.com/Miffie/Miffie/Miffie/SpiderTest.php"/>
-   <file role="test" name="test/pear.diggin.musicrider.com/Miffie/bootstrap.php"/>
+   <file role="test" name="test/__uri/Miffie/phpunit.xml"/>
+   <file role="test" name="test/__uri/Miffie/Miffie/Miffie/SpiderTest.php"/>
+   <file role="test" name="test/__uri/Miffie/bootstrap.php"/>
    <file role="php" name="php/Zend/Validator/Validator.php"/>
    <file role="php" name="php/Zend/Validator/Ip.php"/>
    <file role="php" name="php/Zend/Validator/Hostname/Jp.php"/>
@@ -61,6 +61,8 @@
    <file role="php" name="php/Zend/Stdlib/Options.php"/>
    <file role="php" name="php/Zend/Stdlib/MessageDescription.php"/>
    <file role="php" name="php/Zend/Stdlib/Message.php"/>
+   <file role="php" name="php/Zend/Stdlib/IteratorToArray.php"/>
+   <file role="php" name="php/Zend/Stdlib/IsAssocArray.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/LogicException.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/InvalidCallbackException.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/InvalidArgumentException.php"/>
@@ -70,7 +72,6 @@
    <file role="php" name="php/Zend/Stdlib/ErrorHandler.php"/>
    <file role="php" name="php/Zend/Stdlib/Dispatchable.php"/>
    <file role="php" name="php/Zend/Stdlib/CallbackHandler.php"/>
-   <file role="php" name="php/Zend/Stdlib/ArrayUtils.php"/>
    <file role="php" name="php/Zend/Stdlib/ArrayStack.php"/>
    <file role="php" name="php/Zend/Serializer/Serializer.php"/>
    <file role="php" name="php/Zend/Serializer/Exception/RuntimeException.php"/>
@@ -89,7 +90,6 @@
    <file role="php" name="php/Zend/Serializer/Adapter/Amf0.php"/>
    <file role="php" name="php/Zend/Serializer/Adapter/AbstractAdapter.php"/>
    <file role="php" name="php/Zend/Serializer/Adapter.php"/>
-   <file role="php" name="php/Zend/Registry.php"/>
    <file role="php" name="php/Zend/Loader/StandardAutoloader.php"/>
    <file role="php" name="php/Zend/Loader/SplAutoloader.php"/>
    <file role="php" name="php/Zend/Loader/ShortNameLocator.php"/>
@@ -186,7 +186,6 @@
    <file role="php" name="php/Zend/Http/Header/AcceptEncoding.php"/>
    <file role="php" name="php/Zend/Http/Header/AcceptCharset.php"/>
    <file role="php" name="php/Zend/Http/Header/Accept.php"/>
-   <file role="php" name="php/Zend/Http/Header/AbstractAccept.php"/>
    <file role="php" name="php/Zend/Http/Exception/RuntimeException.php"/>
    <file role="php" name="php/Zend/Http/Exception/InvalidArgumentException.php"/>
    <file role="php" name="php/Zend/Http/Exception.php"/>
@@ -290,7 +289,6 @@
    <file role="php" name="php/Miffie/Spider.php"/>
    <file role="php" name="php/Miffie/GetoptExt.php"/>
    <file role="php" name="php/Miffie/CLIRunner.php"/>
-   <file role="php" name="php/Miffie/Autoload.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Storage/Sqlite3.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Storage/Client.php"/>
    <file role="php" name="php/Diggin/Service/Wedata/Storage/Cache.php"/>
@@ -481,7 +479,6 @@
    <install name="php/Diggin/Service/Wedata/Storage/Cache.php" as="Diggin/Service/Wedata/Storage/Cache.php"/>
    <install name="php/Diggin/Service/Wedata/Storage/Client.php" as="Diggin/Service/Wedata/Storage/Client.php"/>
    <install name="php/Diggin/Service/Wedata/Storage/Sqlite3.php" as="Diggin/Service/Wedata/Storage/Sqlite3.php"/>
-   <install name="php/Miffie/Autoload.php" as="Miffie/Autoload.php"/>
    <install name="php/Miffie/CLIRunner.php" as="Miffie/CLIRunner.php"/>
    <install name="php/Miffie/GetoptExt.php" as="Miffie/GetoptExt.php"/>
    <install name="php/Miffie/Spider.php" as="Miffie/Spider.php"/>
@@ -585,7 +582,6 @@
    <install name="php/Zend/Http/Exception.php" as="Zend/Http/Exception.php"/>
    <install name="php/Zend/Http/Exception/InvalidArgumentException.php" as="Zend/Http/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Http/Exception/RuntimeException.php" as="Zend/Http/Exception/RuntimeException.php"/>
-   <install name="php/Zend/Http/Header/AbstractAccept.php" as="Zend/Http/Header/AbstractAccept.php"/>
    <install name="php/Zend/Http/Header/Accept.php" as="Zend/Http/Header/Accept.php"/>
    <install name="php/Zend/Http/Header/AcceptCharset.php" as="Zend/Http/Header/AcceptCharset.php"/>
    <install name="php/Zend/Http/Header/AcceptEncoding.php" as="Zend/Http/Header/AcceptEncoding.php"/>
@@ -682,7 +678,6 @@
    <install name="php/Zend/Loader/ShortNameLocator.php" as="Zend/Loader/ShortNameLocator.php"/>
    <install name="php/Zend/Loader/SplAutoloader.php" as="Zend/Loader/SplAutoloader.php"/>
    <install name="php/Zend/Loader/StandardAutoloader.php" as="Zend/Loader/StandardAutoloader.php"/>
-   <install name="php/Zend/Registry.php" as="Zend/Registry.php"/>
    <install name="php/Zend/Serializer/Adapter.php" as="Zend/Serializer/Adapter.php"/>
    <install name="php/Zend/Serializer/Adapter/AbstractAdapter.php" as="Zend/Serializer/Adapter/AbstractAdapter.php"/>
    <install name="php/Zend/Serializer/Adapter/Amf0.php" as="Zend/Serializer/Adapter/Amf0.php"/>
@@ -701,7 +696,6 @@
    <install name="php/Zend/Serializer/Exception/RuntimeException.php" as="Zend/Serializer/Exception/RuntimeException.php"/>
    <install name="php/Zend/Serializer/Serializer.php" as="Zend/Serializer/Serializer.php"/>
    <install name="php/Zend/Stdlib/ArrayStack.php" as="Zend/Stdlib/ArrayStack.php"/>
-   <install name="php/Zend/Stdlib/ArrayUtils.php" as="Zend/Stdlib/ArrayUtils.php"/>
    <install name="php/Zend/Stdlib/CallbackHandler.php" as="Zend/Stdlib/CallbackHandler.php"/>
    <install name="php/Zend/Stdlib/Dispatchable.php" as="Zend/Stdlib/Dispatchable.php"/>
    <install name="php/Zend/Stdlib/ErrorHandler.php" as="Zend/Stdlib/ErrorHandler.php"/>
@@ -711,6 +705,8 @@
    <install name="php/Zend/Stdlib/Exception/InvalidArgumentException.php" as="Zend/Stdlib/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Stdlib/Exception/InvalidCallbackException.php" as="Zend/Stdlib/Exception/InvalidCallbackException.php"/>
    <install name="php/Zend/Stdlib/Exception/LogicException.php" as="Zend/Stdlib/Exception/LogicException.php"/>
+   <install name="php/Zend/Stdlib/IsAssocArray.php" as="Zend/Stdlib/IsAssocArray.php"/>
+   <install name="php/Zend/Stdlib/IteratorToArray.php" as="Zend/Stdlib/IteratorToArray.php"/>
    <install name="php/Zend/Stdlib/Message.php" as="Zend/Stdlib/Message.php"/>
    <install name="php/Zend/Stdlib/MessageDescription.php" as="Zend/Stdlib/MessageDescription.php"/>
    <install name="php/Zend/Stdlib/Options.php" as="Zend/Stdlib/Options.php"/>
@@ -747,9 +743,9 @@
    <install name="php/Zend/Validator/Hostname/Jp.php" as="Zend/Validator/Hostname/Jp.php"/>
    <install name="php/Zend/Validator/Ip.php" as="Zend/Validator/Ip.php"/>
    <install name="php/Zend/Validator/Validator.php" as="Zend/Validator/Validator.php"/>
-   <install name="test/pear.diggin.musicrider.com/Miffie/bootstrap.php" as="Miffie/bootstrap.php"/>
-   <install name="test/pear.diggin.musicrider.com/Miffie/Miffie/Miffie/SpiderTest.php" as="Miffie/Miffie/Miffie/SpiderTest.php"/>
-   <install name="test/pear.diggin.musicrider.com/Miffie/phpunit.xml" as="Miffie/phpunit.xml"/>
+   <install name="test/__uri/Miffie/bootstrap.php" as="Miffie/bootstrap.php"/>
+   <install name="test/__uri/Miffie/Miffie/Miffie/SpiderTest.php" as="Miffie/Miffie/Miffie/SpiderTest.php"/>
+   <install name="test/__uri/Miffie/phpunit.xml" as="Miffie/phpunit.xml"/>
   </filelist>
  </phprelease>
 </package>
