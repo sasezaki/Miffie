@@ -9,8 +9,8 @@
   <email>sasezaki@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2012-10-14</date>
- <time>18:51:57</time>
+ <date>2013-08-25</date>
+ <time>01:24:55</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -25,19 +25,105 @@
    <file role="test" name="test/__uri/Miffie/phpunit.xml"/>
    <file role="test" name="test/__uri/Miffie/Miffie/Miffie/SpiderTest.php"/>
    <file role="test" name="test/__uri/Miffie/bootstrap.php"/>
+   <file role="php" name="php/Zend/Validator/ValidatorPluginManagerAwareInterface.php"/>
+   <file role="php" name="php/Zend/Validator/ValidatorPluginManager.php"/>
    <file role="php" name="php/Zend/Validator/ValidatorInterface.php"/>
+   <file role="php" name="php/Zend/Validator/ValidatorChain.php"/>
+   <file role="php" name="php/Zend/Validator/Uri.php"/>
+   <file role="php" name="php/Zend/Validator/Translator/TranslatorInterface.php"/>
+   <file role="php" name="php/Zend/Validator/Translator/TranslatorAwareInterface.php"/>
+   <file role="php" name="php/Zend/Validator/StringLength.php"/>
+   <file role="php" name="php/Zend/Validator/Step.php"/>
+   <file role="php" name="php/Zend/Validator/StaticValidator.php"/>
+   <file role="php" name="php/Zend/Validator/Sitemap/Priority.php"/>
+   <file role="php" name="php/Zend/Validator/Sitemap/Loc.php"/>
+   <file role="php" name="php/Zend/Validator/Sitemap/Lastmod.php"/>
+   <file role="php" name="php/Zend/Validator/Sitemap/Changefreq.php"/>
+   <file role="php" name="php/Zend/Validator/Regex.php"/>
+   <file role="php" name="php/Zend/Validator/NotEmpty.php"/>
+   <file role="php" name="php/Zend/Validator/LessThan.php"/>
+   <file role="php" name="php/Zend/Validator/IsInstanceOf.php"/>
+   <file role="php" name="php/Zend/Validator/Isbn.php"/>
    <file role="php" name="php/Zend/Validator/Ip.php"/>
+   <file role="php" name="php/Zend/Validator/InArray.php"/>
+   <file role="php" name="php/Zend/Validator/Identical.php"/>
+   <file role="php" name="php/Zend/Validator/Iban.php"/>
    <file role="php" name="php/Zend/Validator/Hostname/Jp.php"/>
    <file role="php" name="php/Zend/Validator/Hostname/Com.php"/>
    <file role="php" name="php/Zend/Validator/Hostname/Cn.php"/>
    <file role="php" name="php/Zend/Validator/Hostname/Biz.php"/>
    <file role="php" name="php/Zend/Validator/Hostname.php"/>
+   <file role="php" name="php/Zend/Validator/Hex.php"/>
+   <file role="php" name="php/Zend/Validator/GreaterThan.php"/>
+   <file role="php" name="php/Zend/Validator/File/WordCount.php"/>
+   <file role="php" name="php/Zend/Validator/File/UploadFile.php"/>
+   <file role="php" name="php/Zend/Validator/File/Upload.php"/>
+   <file role="php" name="php/Zend/Validator/File/Size.php"/>
+   <file role="php" name="php/Zend/Validator/File/Sha1.php"/>
+   <file role="php" name="php/Zend/Validator/File/NotExists.php"/>
+   <file role="php" name="php/Zend/Validator/File/MimeType.php"/>
+   <file role="php" name="php/Zend/Validator/File/Md5.php"/>
+   <file role="php" name="php/Zend/Validator/File/IsImage.php"/>
+   <file role="php" name="php/Zend/Validator/File/IsCompressed.php"/>
+   <file role="php" name="php/Zend/Validator/File/ImageSize.php"/>
+   <file role="php" name="php/Zend/Validator/File/Hash.php"/>
+   <file role="php" name="php/Zend/Validator/File/FilesSize.php"/>
+   <file role="php" name="php/Zend/Validator/File/Extension.php"/>
+   <file role="php" name="php/Zend/Validator/File/Exists.php"/>
+   <file role="php" name="php/Zend/Validator/File/ExcludeMimeType.php"/>
+   <file role="php" name="php/Zend/Validator/File/ExcludeExtension.php"/>
+   <file role="php" name="php/Zend/Validator/File/Crc32.php"/>
+   <file role="php" name="php/Zend/Validator/File/Count.php"/>
+   <file role="php" name="php/Zend/Validator/Explode.php"/>
    <file role="php" name="php/Zend/Validator/Exception/RuntimeException.php"/>
    <file role="php" name="php/Zend/Validator/Exception/InvalidMagicMimeFileException.php"/>
    <file role="php" name="php/Zend/Validator/Exception/InvalidArgumentException.php"/>
    <file role="php" name="php/Zend/Validator/Exception/ExtensionNotLoadedException.php"/>
    <file role="php" name="php/Zend/Validator/Exception/ExceptionInterface.php"/>
    <file role="php" name="php/Zend/Validator/Exception/BadMethodCallException.php"/>
+   <file role="php" name="php/Zend/Validator/EmailAddress.php"/>
+   <file role="php" name="php/Zend/Validator/Digits.php"/>
+   <file role="php" name="php/Zend/Validator/Db/RecordExists.php"/>
+   <file role="php" name="php/Zend/Validator/Db/NoRecordExists.php"/>
+   <file role="php" name="php/Zend/Validator/Db/AbstractDb.php"/>
+   <file role="php" name="php/Zend/Validator/DateStep.php"/>
+   <file role="php" name="php/Zend/Validator/Date.php"/>
+   <file role="php" name="php/Zend/Validator/Csrf.php"/>
+   <file role="php" name="php/Zend/Validator/CreditCard.php"/>
+   <file role="php" name="php/Zend/Validator/Callback.php"/>
+   <file role="php" name="php/Zend/Validator/Between.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Upce.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Upca.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Sscc.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Royalmail.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Postnet.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Planet.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Leitcode.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Itf14.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Issn.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Intelligentmail.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Identcode.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Gtin14.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Gtin13.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Gtin12.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Ean18.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Ean14.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Ean13.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Ean12.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Ean8.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Ean5.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Ean2.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Code128.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Code93ext.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Code93.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Code39ext.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Code39.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Code25interleaved.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Code25.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/Codabar.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/AdapterInterface.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode/AbstractAdapter.php"/>
+   <file role="php" name="php/Zend/Validator/Barcode.php"/>
    <file role="php" name="php/Zend/Validator/AbstractValidator.php"/>
    <file role="php" name="php/Zend/Uri/UriInterface.php"/>
    <file role="php" name="php/Zend/Uri/UriFactory.php"/>
@@ -49,6 +135,13 @@
    <file role="php" name="php/Zend/Uri/Exception/InvalidUriException.php"/>
    <file role="php" name="php/Zend/Uri/Exception/InvalidArgumentException.php"/>
    <file role="php" name="php/Zend/Uri/Exception/ExceptionInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/StringWrapper/StringWrapperInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/StringWrapper/Native.php"/>
+   <file role="php" name="php/Zend/Stdlib/StringWrapper/MbString.php"/>
+   <file role="php" name="php/Zend/Stdlib/StringWrapper/Intl.php"/>
+   <file role="php" name="php/Zend/Stdlib/StringWrapper/Iconv.php"/>
+   <file role="php" name="php/Zend/Stdlib/StringWrapper/AbstractStringWrapper.php"/>
+   <file role="php" name="php/Zend/Stdlib/StringUtils.php"/>
    <file role="php" name="php/Zend/Stdlib/SplStack.php"/>
    <file role="php" name="php/Zend/Stdlib/SplQueue.php"/>
    <file role="php" name="php/Zend/Stdlib/SplPriorityQueue.php"/>
@@ -62,47 +155,55 @@
    <file role="php" name="php/Zend/Stdlib/ParameterObjectInterface.php"/>
    <file role="php" name="php/Zend/Stdlib/MessageInterface.php"/>
    <file role="php" name="php/Zend/Stdlib/Message.php"/>
+   <file role="php" name="php/Zend/Stdlib/InitializableInterface.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/StrategyEnabledInterface.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/Strategy/StrategyInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Strategy/SerializableStrategy.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/Strategy/DefaultStrategy.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Strategy/ClosureStrategy.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/Reflection.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/ObjectProperty.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/HydratorPluginManager.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/HydratorOptionsInterface.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/HydratorInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/HydratorAwareInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/OptionalParametersFilter.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/NumberOfParameterFilter.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/MethodMatchFilter.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/IsFilter.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/HasFilter.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/GetFilter.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/FilterProviderInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/FilterInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Filter/FilterComposite.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/ClassMethods.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/ArraySerializable.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Aggregate/HydratorListener.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Aggregate/HydrateEvent.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Aggregate/ExtractEvent.php"/>
+   <file role="php" name="php/Zend/Stdlib/Hydrator/Aggregate/AggregateHydrator.php"/>
    <file role="php" name="php/Zend/Stdlib/Hydrator/AbstractHydrator.php"/>
    <file role="php" name="php/Zend/Stdlib/Glob.php"/>
+   <file role="php" name="php/Zend/Stdlib/Exception/RuntimeException.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/LogicException.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/InvalidCallbackException.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/InvalidArgumentException.php"/>
+   <file role="php" name="php/Zend/Stdlib/Exception/ExtensionNotLoadedException.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/ExceptionInterface.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/DomainException.php"/>
    <file role="php" name="php/Zend/Stdlib/Exception/BadMethodCallException.php"/>
    <file role="php" name="php/Zend/Stdlib/ErrorHandler.php"/>
    <file role="php" name="php/Zend/Stdlib/DispatchableInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/DateTime.php"/>
+   <file role="php" name="php/Zend/Stdlib/compatibility/autoload.php"/>
    <file role="php" name="php/Zend/Stdlib/CallbackHandler.php"/>
    <file role="php" name="php/Zend/Stdlib/ArrayUtils.php"/>
    <file role="php" name="php/Zend/Stdlib/ArrayStack.php"/>
    <file role="php" name="php/Zend/Stdlib/ArraySerializableInterface.php"/>
+   <file role="php" name="php/Zend/Stdlib/ArrayObject/PhpReferenceCompatibility.php"/>
+   <file role="php" name="php/Zend/Stdlib/ArrayObject/PhpLegacyCompatibility.php"/>
+   <file role="php" name="php/Zend/Stdlib/ArrayObject.php"/>
    <file role="php" name="php/Zend/Stdlib/AbstractOptions.php"/>
-   <file role="php" name="php/Zend/Serializer/Serializer.php"/>
-   <file role="php" name="php/Zend/Serializer/Exception/RuntimeException.php"/>
-   <file role="php" name="php/Zend/Serializer/Exception/InvalidArgumentException.php"/>
-   <file role="php" name="php/Zend/Serializer/Exception/ExtensionNotLoadedException.php"/>
-   <file role="php" name="php/Zend/Serializer/Exception/ExceptionInterface.php"/>
-   <file role="php" name="php/Zend/Serializer/AdapterPluginManager.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/WddxOptions.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/Wddx.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/PythonPickleOptions.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/PythonPickle.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/PhpSerialize.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/PhpCode.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/JsonOptions.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/Json.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/IgBinary.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/AdapterOptions.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/AdapterInterface.php"/>
-   <file role="php" name="php/Zend/Serializer/Adapter/AbstractAdapter.php"/>
    <file role="php" name="php/Zend/Loader/StandardAutoloader.php"/>
    <file role="php" name="php/Zend/Loader/SplAutoloader.php"/>
    <file role="php" name="php/Zend/Loader/ShortNameLocator.php"/>
@@ -120,18 +221,36 @@
    <file role="php" name="php/Zend/Loader/Exception/BadMethodCallException.php"/>
    <file role="php" name="php/Zend/Loader/ClassMapAutoloader.php"/>
    <file role="php" name="php/Zend/Loader/AutoloaderFactory.php"/>
+   <file role="php" name="php/Zend/Json/Server/Smd/Service.php"/>
+   <file role="php" name="php/Zend/Json/Server/Smd.php"/>
+   <file role="php" name="php/Zend/Json/Server/Server.php"/>
+   <file role="php" name="php/Zend/Json/Server/Response/Http.php"/>
+   <file role="php" name="php/Zend/Json/Server/Response.php"/>
+   <file role="php" name="php/Zend/Json/Server/Request/Http.php"/>
+   <file role="php" name="php/Zend/Json/Server/Request.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/RuntimeException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/InvalidArgumentException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/HttpException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/ExceptionInterface.php"/>
+   <file role="php" name="php/Zend/Json/Server/Exception/ErrorException.php"/>
+   <file role="php" name="php/Zend/Json/Server/Error.php"/>
+   <file role="php" name="php/Zend/Json/Server/Client.php"/>
+   <file role="php" name="php/Zend/Json/Server/Cache.php"/>
+   <file role="php" name="php/Zend/Json/Json.php"/>
+   <file role="php" name="php/Zend/Json/Expr.php"/>
    <file role="php" name="php/Zend/Json/Exception/RuntimeException.php"/>
    <file role="php" name="php/Zend/Json/Exception/RecursionException.php"/>
    <file role="php" name="php/Zend/Json/Exception/InvalidArgumentException.php"/>
    <file role="php" name="php/Zend/Json/Exception/ExceptionInterface.php"/>
    <file role="php" name="php/Zend/Json/Exception/BadMethodCallException.php"/>
+   <file role="php" name="php/Zend/Json/Encoder.php"/>
    <file role="php" name="php/Zend/Json/Decoder.php"/>
-   <file role="php" name="php/Zend/I18n/Translator/TranslatorAwareInterface.php"/>
    <file role="php" name="php/Zend/Http/Response/Stream.php"/>
    <file role="php" name="php/Zend/Http/Response.php"/>
    <file role="php" name="php/Zend/Http/Request.php"/>
    <file role="php" name="php/Zend/Http/PhpEnvironment/Response.php"/>
    <file role="php" name="php/Zend/Http/PhpEnvironment/Request.php"/>
+   <file role="php" name="php/Zend/Http/PhpEnvironment/RemoteAddress.php"/>
    <file role="php" name="php/Zend/Http/Headers.php"/>
    <file role="php" name="php/Zend/Http/HeaderLoader.php"/>
    <file role="php" name="php/Zend/Http/Header/WWWAuthenticate.php"/>
@@ -176,6 +295,7 @@
    <file role="php" name="php/Zend/Http/Header/Date.php"/>
    <file role="php" name="php/Zend/Http/Header/Cookie.php"/>
    <file role="php" name="php/Zend/Http/Header/ContentType.php"/>
+   <file role="php" name="php/Zend/Http/Header/ContentTransferEncoding.php"/>
    <file role="php" name="php/Zend/Http/Header/ContentRange.php"/>
    <file role="php" name="php/Zend/Http/Header/ContentMD5.php"/>
    <file role="php" name="php/Zend/Http/Header/ContentLocation.php"/>
@@ -227,31 +347,15 @@
    <file role="php" name="php/Zend/Http/Client/Adapter/AdapterInterface.php"/>
    <file role="php" name="php/Zend/Http/Client.php"/>
    <file role="php" name="php/Zend/Http/AbstractMessage.php"/>
-   <file role="php" name="php/Zend/EventManager/StaticEventManager.php"/>
-   <file role="php" name="php/Zend/EventManager/SharedEventManagerInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/SharedEventManagerAwareInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/SharedEventManager.php"/>
-   <file role="php" name="php/Zend/EventManager/ResponseCollection.php"/>
-   <file role="php" name="php/Zend/EventManager/ProvidesEvents.php"/>
-   <file role="php" name="php/Zend/EventManager/ListenerAggregateInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/GlobalEventManager.php"/>
-   <file role="php" name="php/Zend/EventManager/FilterChain.php"/>
-   <file role="php" name="php/Zend/EventManager/Filter/FilterIterator.php"/>
-   <file role="php" name="php/Zend/EventManager/Filter/FilterInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/Exception/InvalidCallbackException.php"/>
-   <file role="php" name="php/Zend/EventManager/Exception/InvalidArgumentException.php"/>
-   <file role="php" name="php/Zend/EventManager/Exception/ExceptionInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/Exception/DomainException.php"/>
-   <file role="php" name="php/Zend/EventManager/EventsCapableInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/EventManagerInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/EventManagerAwareInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/EventManager.php"/>
-   <file role="php" name="php/Zend/EventManager/EventInterface.php"/>
-   <file role="php" name="php/Zend/EventManager/Event.php"/>
    <file role="php" name="php/Zend/Escaper/Exception/RuntimeException.php"/>
    <file role="php" name="php/Zend/Escaper/Exception/InvalidArgumentException.php"/>
    <file role="php" name="php/Zend/Escaper/Exception/ExceptionInterface.php"/>
    <file role="php" name="php/Zend/Escaper/Escaper.php"/>
+   <file role="php" name="php/Zend/Dom/Query.php"/>
+   <file role="php" name="php/Zend/Dom/NodeList.php"/>
+   <file role="php" name="php/Zend/Dom/Exception/RuntimeException.php"/>
+   <file role="php" name="php/Zend/Dom/Exception/ExceptionInterface.php"/>
+   <file role="php" name="php/Zend/Dom/Exception/BadMethodCallException.php"/>
    <file role="php" name="php/Zend/Dom/Css2Xpath.php"/>
    <file role="php" name="php/Zend/Console/Response.php"/>
    <file role="php" name="php/Zend/Console/Request.php"/>
@@ -269,6 +373,7 @@
    <file role="php" name="php/Zend/Console/Exception/BadMethodCallException.php"/>
    <file role="php" name="php/Zend/Console/Console.php"/>
    <file role="php" name="php/Zend/Console/ColorInterface.php"/>
+   <file role="php" name="php/Zend/Console/Color/Xterm256.php"/>
    <file role="php" name="php/Zend/Console/Charset/Utf8Heavy.php"/>
    <file role="php" name="php/Zend/Console/Charset/Utf8.php"/>
    <file role="php" name="php/Zend/Console/Charset/DECSG.php"/>
@@ -281,74 +386,6 @@
    <file role="php" name="php/Zend/Console/Adapter/Posix.php"/>
    <file role="php" name="php/Zend/Console/Adapter/AdapterInterface.php"/>
    <file role="php" name="php/Zend/Console/Adapter/AbstractAdapter.php"/>
-   <file role="php" name="php/Zend/Cache/StorageFactory.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/TotalSpaceCapableInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/TaggableInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/StorageInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/PostEvent.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/PluginManager.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/Serializer.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/PluginOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/PluginInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/OptimizeByFactor.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/IgnoreUserAbort.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/ExceptionHandler.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/ClearExpiredByFactor.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Plugin/AbstractPlugin.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/OptimizableInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/IteratorInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/IterableInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/FlushableInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/ExceptionEvent.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Event.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/ClearExpiredInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/ClearByPrefixInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/ClearByNamespaceInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Capabilities.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/AvailableSpaceCapableInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/AdapterPluginManager.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/ZendServerShm.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/ZendServerDisk.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/WinCacheOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/WinCache.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/MemoryOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/Memory.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/MemcachedOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/Memcached.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/KeyListIterator.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/FilesystemOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/FilesystemIterator.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/Filesystem.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/DbaOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/DbaIterator.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/Dba.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/ApcOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/ApcIterator.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/Apc.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/AdapterOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/AbstractZendServer.php"/>
-   <file role="php" name="php/Zend/Cache/Storage/Adapter/AbstractAdapter.php"/>
-   <file role="php" name="php/Zend/Cache/PatternPluginManager.php"/>
-   <file role="php" name="php/Zend/Cache/PatternFactory.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/PatternOptions.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/PatternInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/OutputCache.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/ObjectCache.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/ClassCache.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/CaptureCache.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/CallbackCache.php"/>
-   <file role="php" name="php/Zend/Cache/Pattern/AbstractPattern.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/UnsupportedMethodCallException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/UnexpectedValueException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/RuntimeException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/OutOfSpaceException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/MissingKeyException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/MissingDependencyException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/LogicException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/InvalidArgumentException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/ExtensionNotLoadedException.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/ExceptionInterface.php"/>
-   <file role="php" name="php/Zend/Cache/Exception/BadMethodCallException.php"/>
    <file role="php" name="php/Miffie/Spider.php"/>
    <file role="php" name="php/Miffie/GetoptExt.php"/>
    <file role="php" name="php/Miffie/CLIRunner.php"/>
@@ -400,6 +437,7 @@
    <file role="php" name="php/Diggin/Scraper/Filter/Iterator.php"/>
    <file role="php" name="php/Diggin/Scraper/Filter/Filter.php"/>
    <file role="php" name="php/Diggin/Scraper/Filter/Exception.php"/>
+   <file role="php" name="php/Diggin/Scraper/Exception/UnexpectedValueException.php"/>
    <file role="php" name="php/Diggin/Scraper/Exception/RuntimeException.php"/>
    <file role="php" name="php/Diggin/Scraper/Exception/LogicException.php"/>
    <file role="php" name="php/Diggin/Scraper/Exception/InvalidArgumentException.php"/>
@@ -423,8 +461,8 @@
    <file role="php" name="php/Diggin/Scraper/Adapter/Exception.php"/>
    <file role="php" name="php/Diggin/Scraper/Adapter.php"/>
    <file role="php" name="php/Diggin/Http/Charset/WrapperFactory.php"/>
+   <file role="php" name="php/Diggin/Http/Charset/Wrapper/ZF2Wrapper/HeaderContentType.php"/>
    <file role="php" name="php/Diggin/Http/Charset/Wrapper/ZF2Wrapper.php"/>
-   <file role="php" name="php/Diggin/Http/Charset/Wrapper/ZF1Wrapper.php"/>
    <file role="php" name="php/Diggin/Http/Charset/Wrapper/Symfony2.php"/>
    <file role="php" name="php/Diggin/Http/Charset/Wrapper/PeclHttpMessageWrapper.php"/>
    <file role="php" name="php/Diggin/Http/Charset/Front/UrlRegex.php"/>
@@ -471,8 +509,8 @@
    <install name="php/Diggin/Http/Charset/Front/UrlRegex.php" as="Diggin/Http/Charset/Front/UrlRegex.php"/>
    <install name="php/Diggin/Http/Charset/Wrapper/PeclHttpMessageWrapper.php" as="Diggin/Http/Charset/Wrapper/PeclHttpMessageWrapper.php"/>
    <install name="php/Diggin/Http/Charset/Wrapper/Symfony2.php" as="Diggin/Http/Charset/Wrapper/Symfony2.php"/>
-   <install name="php/Diggin/Http/Charset/Wrapper/ZF1Wrapper.php" as="Diggin/Http/Charset/Wrapper/ZF1Wrapper.php"/>
    <install name="php/Diggin/Http/Charset/Wrapper/ZF2Wrapper.php" as="Diggin/Http/Charset/Wrapper/ZF2Wrapper.php"/>
+   <install name="php/Diggin/Http/Charset/Wrapper/ZF2Wrapper/HeaderContentType.php" as="Diggin/Http/Charset/Wrapper/ZF2Wrapper/HeaderContentType.php"/>
    <install name="php/Diggin/Http/Charset/WrapperFactory.php" as="Diggin/Http/Charset/WrapperFactory.php"/>
    <install name="php/Diggin/Scraper/Adapter.php" as="Diggin/Scraper/Adapter.php"/>
    <install name="php/Diggin/Scraper/Adapter/Exception.php" as="Diggin/Scraper/Adapter/Exception.php"/>
@@ -496,6 +534,7 @@
    <install name="php/Diggin/Scraper/Exception/InvalidArgumentException.php" as="Diggin/Scraper/Exception/InvalidArgumentException.php"/>
    <install name="php/Diggin/Scraper/Exception/LogicException.php" as="Diggin/Scraper/Exception/LogicException.php"/>
    <install name="php/Diggin/Scraper/Exception/RuntimeException.php" as="Diggin/Scraper/Exception/RuntimeException.php"/>
+   <install name="php/Diggin/Scraper/Exception/UnexpectedValueException.php" as="Diggin/Scraper/Exception/UnexpectedValueException.php"/>
    <install name="php/Diggin/Scraper/Filter/Exception.php" as="Diggin/Scraper/Filter/Exception.php"/>
    <install name="php/Diggin/Scraper/Filter/Filter.php" as="Diggin/Scraper/Filter/Filter.php"/>
    <install name="php/Diggin/Scraper/Filter/Iterator.php" as="Diggin/Scraper/Filter/Iterator.php"/>
@@ -547,74 +586,6 @@
    <install name="php/Miffie/CLIRunner.php" as="Miffie/CLIRunner.php"/>
    <install name="php/Miffie/GetoptExt.php" as="Miffie/GetoptExt.php"/>
    <install name="php/Miffie/Spider.php" as="Miffie/Spider.php"/>
-   <install name="php/Zend/Cache/Exception/BadMethodCallException.php" as="Zend/Cache/Exception/BadMethodCallException.php"/>
-   <install name="php/Zend/Cache/Exception/ExceptionInterface.php" as="Zend/Cache/Exception/ExceptionInterface.php"/>
-   <install name="php/Zend/Cache/Exception/ExtensionNotLoadedException.php" as="Zend/Cache/Exception/ExtensionNotLoadedException.php"/>
-   <install name="php/Zend/Cache/Exception/InvalidArgumentException.php" as="Zend/Cache/Exception/InvalidArgumentException.php"/>
-   <install name="php/Zend/Cache/Exception/LogicException.php" as="Zend/Cache/Exception/LogicException.php"/>
-   <install name="php/Zend/Cache/Exception/MissingDependencyException.php" as="Zend/Cache/Exception/MissingDependencyException.php"/>
-   <install name="php/Zend/Cache/Exception/MissingKeyException.php" as="Zend/Cache/Exception/MissingKeyException.php"/>
-   <install name="php/Zend/Cache/Exception/OutOfSpaceException.php" as="Zend/Cache/Exception/OutOfSpaceException.php"/>
-   <install name="php/Zend/Cache/Exception/RuntimeException.php" as="Zend/Cache/Exception/RuntimeException.php"/>
-   <install name="php/Zend/Cache/Exception/UnexpectedValueException.php" as="Zend/Cache/Exception/UnexpectedValueException.php"/>
-   <install name="php/Zend/Cache/Exception/UnsupportedMethodCallException.php" as="Zend/Cache/Exception/UnsupportedMethodCallException.php"/>
-   <install name="php/Zend/Cache/Pattern/AbstractPattern.php" as="Zend/Cache/Pattern/AbstractPattern.php"/>
-   <install name="php/Zend/Cache/Pattern/CallbackCache.php" as="Zend/Cache/Pattern/CallbackCache.php"/>
-   <install name="php/Zend/Cache/Pattern/CaptureCache.php" as="Zend/Cache/Pattern/CaptureCache.php"/>
-   <install name="php/Zend/Cache/Pattern/ClassCache.php" as="Zend/Cache/Pattern/ClassCache.php"/>
-   <install name="php/Zend/Cache/Pattern/ObjectCache.php" as="Zend/Cache/Pattern/ObjectCache.php"/>
-   <install name="php/Zend/Cache/Pattern/OutputCache.php" as="Zend/Cache/Pattern/OutputCache.php"/>
-   <install name="php/Zend/Cache/Pattern/PatternInterface.php" as="Zend/Cache/Pattern/PatternInterface.php"/>
-   <install name="php/Zend/Cache/Pattern/PatternOptions.php" as="Zend/Cache/Pattern/PatternOptions.php"/>
-   <install name="php/Zend/Cache/PatternFactory.php" as="Zend/Cache/PatternFactory.php"/>
-   <install name="php/Zend/Cache/PatternPluginManager.php" as="Zend/Cache/PatternPluginManager.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/AbstractAdapter.php" as="Zend/Cache/Storage/Adapter/AbstractAdapter.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/AbstractZendServer.php" as="Zend/Cache/Storage/Adapter/AbstractZendServer.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/AdapterOptions.php" as="Zend/Cache/Storage/Adapter/AdapterOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/Apc.php" as="Zend/Cache/Storage/Adapter/Apc.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/ApcIterator.php" as="Zend/Cache/Storage/Adapter/ApcIterator.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/ApcOptions.php" as="Zend/Cache/Storage/Adapter/ApcOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/Dba.php" as="Zend/Cache/Storage/Adapter/Dba.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/DbaIterator.php" as="Zend/Cache/Storage/Adapter/DbaIterator.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/DbaOptions.php" as="Zend/Cache/Storage/Adapter/DbaOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/Filesystem.php" as="Zend/Cache/Storage/Adapter/Filesystem.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/FilesystemIterator.php" as="Zend/Cache/Storage/Adapter/FilesystemIterator.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/FilesystemOptions.php" as="Zend/Cache/Storage/Adapter/FilesystemOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/KeyListIterator.php" as="Zend/Cache/Storage/Adapter/KeyListIterator.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/Memcached.php" as="Zend/Cache/Storage/Adapter/Memcached.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/MemcachedOptions.php" as="Zend/Cache/Storage/Adapter/MemcachedOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/Memory.php" as="Zend/Cache/Storage/Adapter/Memory.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/MemoryOptions.php" as="Zend/Cache/Storage/Adapter/MemoryOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/WinCache.php" as="Zend/Cache/Storage/Adapter/WinCache.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/WinCacheOptions.php" as="Zend/Cache/Storage/Adapter/WinCacheOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/ZendServerDisk.php" as="Zend/Cache/Storage/Adapter/ZendServerDisk.php"/>
-   <install name="php/Zend/Cache/Storage/Adapter/ZendServerShm.php" as="Zend/Cache/Storage/Adapter/ZendServerShm.php"/>
-   <install name="php/Zend/Cache/Storage/AdapterPluginManager.php" as="Zend/Cache/Storage/AdapterPluginManager.php"/>
-   <install name="php/Zend/Cache/Storage/AvailableSpaceCapableInterface.php" as="Zend/Cache/Storage/AvailableSpaceCapableInterface.php"/>
-   <install name="php/Zend/Cache/Storage/Capabilities.php" as="Zend/Cache/Storage/Capabilities.php"/>
-   <install name="php/Zend/Cache/Storage/ClearByNamespaceInterface.php" as="Zend/Cache/Storage/ClearByNamespaceInterface.php"/>
-   <install name="php/Zend/Cache/Storage/ClearByPrefixInterface.php" as="Zend/Cache/Storage/ClearByPrefixInterface.php"/>
-   <install name="php/Zend/Cache/Storage/ClearExpiredInterface.php" as="Zend/Cache/Storage/ClearExpiredInterface.php"/>
-   <install name="php/Zend/Cache/Storage/Event.php" as="Zend/Cache/Storage/Event.php"/>
-   <install name="php/Zend/Cache/Storage/ExceptionEvent.php" as="Zend/Cache/Storage/ExceptionEvent.php"/>
-   <install name="php/Zend/Cache/Storage/FlushableInterface.php" as="Zend/Cache/Storage/FlushableInterface.php"/>
-   <install name="php/Zend/Cache/Storage/IterableInterface.php" as="Zend/Cache/Storage/IterableInterface.php"/>
-   <install name="php/Zend/Cache/Storage/IteratorInterface.php" as="Zend/Cache/Storage/IteratorInterface.php"/>
-   <install name="php/Zend/Cache/Storage/OptimizableInterface.php" as="Zend/Cache/Storage/OptimizableInterface.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/AbstractPlugin.php" as="Zend/Cache/Storage/Plugin/AbstractPlugin.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/ClearExpiredByFactor.php" as="Zend/Cache/Storage/Plugin/ClearExpiredByFactor.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/ExceptionHandler.php" as="Zend/Cache/Storage/Plugin/ExceptionHandler.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/IgnoreUserAbort.php" as="Zend/Cache/Storage/Plugin/IgnoreUserAbort.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/OptimizeByFactor.php" as="Zend/Cache/Storage/Plugin/OptimizeByFactor.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/PluginInterface.php" as="Zend/Cache/Storage/Plugin/PluginInterface.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/PluginOptions.php" as="Zend/Cache/Storage/Plugin/PluginOptions.php"/>
-   <install name="php/Zend/Cache/Storage/Plugin/Serializer.php" as="Zend/Cache/Storage/Plugin/Serializer.php"/>
-   <install name="php/Zend/Cache/Storage/PluginManager.php" as="Zend/Cache/Storage/PluginManager.php"/>
-   <install name="php/Zend/Cache/Storage/PostEvent.php" as="Zend/Cache/Storage/PostEvent.php"/>
-   <install name="php/Zend/Cache/Storage/StorageInterface.php" as="Zend/Cache/Storage/StorageInterface.php"/>
-   <install name="php/Zend/Cache/Storage/TaggableInterface.php" as="Zend/Cache/Storage/TaggableInterface.php"/>
-   <install name="php/Zend/Cache/Storage/TotalSpaceCapableInterface.php" as="Zend/Cache/Storage/TotalSpaceCapableInterface.php"/>
-   <install name="php/Zend/Cache/StorageFactory.php" as="Zend/Cache/StorageFactory.php"/>
    <install name="php/Zend/Console/Adapter/AbstractAdapter.php" as="Zend/Console/Adapter/AbstractAdapter.php"/>
    <install name="php/Zend/Console/Adapter/AdapterInterface.php" as="Zend/Console/Adapter/AdapterInterface.php"/>
    <install name="php/Zend/Console/Adapter/Posix.php" as="Zend/Console/Adapter/Posix.php"/>
@@ -627,6 +598,7 @@
    <install name="php/Zend/Console/Charset/DECSG.php" as="Zend/Console/Charset/DECSG.php"/>
    <install name="php/Zend/Console/Charset/Utf8.php" as="Zend/Console/Charset/Utf8.php"/>
    <install name="php/Zend/Console/Charset/Utf8Heavy.php" as="Zend/Console/Charset/Utf8Heavy.php"/>
+   <install name="php/Zend/Console/Color/Xterm256.php" as="Zend/Console/Color/Xterm256.php"/>
    <install name="php/Zend/Console/ColorInterface.php" as="Zend/Console/ColorInterface.php"/>
    <install name="php/Zend/Console/Console.php" as="Zend/Console/Console.php"/>
    <install name="php/Zend/Console/Exception/BadMethodCallException.php" as="Zend/Console/Exception/BadMethodCallException.php"/>
@@ -644,31 +616,15 @@
    <install name="php/Zend/Console/Request.php" as="Zend/Console/Request.php"/>
    <install name="php/Zend/Console/Response.php" as="Zend/Console/Response.php"/>
    <install name="php/Zend/Dom/Css2Xpath.php" as="Zend/Dom/Css2Xpath.php"/>
+   <install name="php/Zend/Dom/Exception/BadMethodCallException.php" as="Zend/Dom/Exception/BadMethodCallException.php"/>
+   <install name="php/Zend/Dom/Exception/ExceptionInterface.php" as="Zend/Dom/Exception/ExceptionInterface.php"/>
+   <install name="php/Zend/Dom/Exception/RuntimeException.php" as="Zend/Dom/Exception/RuntimeException.php"/>
+   <install name="php/Zend/Dom/NodeList.php" as="Zend/Dom/NodeList.php"/>
+   <install name="php/Zend/Dom/Query.php" as="Zend/Dom/Query.php"/>
    <install name="php/Zend/Escaper/Escaper.php" as="Zend/Escaper/Escaper.php"/>
    <install name="php/Zend/Escaper/Exception/ExceptionInterface.php" as="Zend/Escaper/Exception/ExceptionInterface.php"/>
    <install name="php/Zend/Escaper/Exception/InvalidArgumentException.php" as="Zend/Escaper/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Escaper/Exception/RuntimeException.php" as="Zend/Escaper/Exception/RuntimeException.php"/>
-   <install name="php/Zend/EventManager/Event.php" as="Zend/EventManager/Event.php"/>
-   <install name="php/Zend/EventManager/EventInterface.php" as="Zend/EventManager/EventInterface.php"/>
-   <install name="php/Zend/EventManager/EventManager.php" as="Zend/EventManager/EventManager.php"/>
-   <install name="php/Zend/EventManager/EventManagerAwareInterface.php" as="Zend/EventManager/EventManagerAwareInterface.php"/>
-   <install name="php/Zend/EventManager/EventManagerInterface.php" as="Zend/EventManager/EventManagerInterface.php"/>
-   <install name="php/Zend/EventManager/EventsCapableInterface.php" as="Zend/EventManager/EventsCapableInterface.php"/>
-   <install name="php/Zend/EventManager/Exception/DomainException.php" as="Zend/EventManager/Exception/DomainException.php"/>
-   <install name="php/Zend/EventManager/Exception/ExceptionInterface.php" as="Zend/EventManager/Exception/ExceptionInterface.php"/>
-   <install name="php/Zend/EventManager/Exception/InvalidArgumentException.php" as="Zend/EventManager/Exception/InvalidArgumentException.php"/>
-   <install name="php/Zend/EventManager/Exception/InvalidCallbackException.php" as="Zend/EventManager/Exception/InvalidCallbackException.php"/>
-   <install name="php/Zend/EventManager/Filter/FilterInterface.php" as="Zend/EventManager/Filter/FilterInterface.php"/>
-   <install name="php/Zend/EventManager/Filter/FilterIterator.php" as="Zend/EventManager/Filter/FilterIterator.php"/>
-   <install name="php/Zend/EventManager/FilterChain.php" as="Zend/EventManager/FilterChain.php"/>
-   <install name="php/Zend/EventManager/GlobalEventManager.php" as="Zend/EventManager/GlobalEventManager.php"/>
-   <install name="php/Zend/EventManager/ListenerAggregateInterface.php" as="Zend/EventManager/ListenerAggregateInterface.php"/>
-   <install name="php/Zend/EventManager/ProvidesEvents.php" as="Zend/EventManager/ProvidesEvents.php"/>
-   <install name="php/Zend/EventManager/ResponseCollection.php" as="Zend/EventManager/ResponseCollection.php"/>
-   <install name="php/Zend/EventManager/SharedEventManager.php" as="Zend/EventManager/SharedEventManager.php"/>
-   <install name="php/Zend/EventManager/SharedEventManagerAwareInterface.php" as="Zend/EventManager/SharedEventManagerAwareInterface.php"/>
-   <install name="php/Zend/EventManager/SharedEventManagerInterface.php" as="Zend/EventManager/SharedEventManagerInterface.php"/>
-   <install name="php/Zend/EventManager/StaticEventManager.php" as="Zend/EventManager/StaticEventManager.php"/>
    <install name="php/Zend/Http/AbstractMessage.php" as="Zend/Http/AbstractMessage.php"/>
    <install name="php/Zend/Http/Client.php" as="Zend/Http/Client.php"/>
    <install name="php/Zend/Http/Client/Adapter/AdapterInterface.php" as="Zend/Http/Client/Adapter/AdapterInterface.php"/>
@@ -720,6 +676,7 @@
    <install name="php/Zend/Http/Header/ContentLocation.php" as="Zend/Http/Header/ContentLocation.php"/>
    <install name="php/Zend/Http/Header/ContentMD5.php" as="Zend/Http/Header/ContentMD5.php"/>
    <install name="php/Zend/Http/Header/ContentRange.php" as="Zend/Http/Header/ContentRange.php"/>
+   <install name="php/Zend/Http/Header/ContentTransferEncoding.php" as="Zend/Http/Header/ContentTransferEncoding.php"/>
    <install name="php/Zend/Http/Header/ContentType.php" as="Zend/Http/Header/ContentType.php"/>
    <install name="php/Zend/Http/Header/Cookie.php" as="Zend/Http/Header/Cookie.php"/>
    <install name="php/Zend/Http/Header/Date.php" as="Zend/Http/Header/Date.php"/>
@@ -764,18 +721,36 @@
    <install name="php/Zend/Http/Header/WWWAuthenticate.php" as="Zend/Http/Header/WWWAuthenticate.php"/>
    <install name="php/Zend/Http/HeaderLoader.php" as="Zend/Http/HeaderLoader.php"/>
    <install name="php/Zend/Http/Headers.php" as="Zend/Http/Headers.php"/>
+   <install name="php/Zend/Http/PhpEnvironment/RemoteAddress.php" as="Zend/Http/PhpEnvironment/RemoteAddress.php"/>
    <install name="php/Zend/Http/PhpEnvironment/Request.php" as="Zend/Http/PhpEnvironment/Request.php"/>
    <install name="php/Zend/Http/PhpEnvironment/Response.php" as="Zend/Http/PhpEnvironment/Response.php"/>
    <install name="php/Zend/Http/Request.php" as="Zend/Http/Request.php"/>
    <install name="php/Zend/Http/Response.php" as="Zend/Http/Response.php"/>
    <install name="php/Zend/Http/Response/Stream.php" as="Zend/Http/Response/Stream.php"/>
-   <install name="php/Zend/I18n/Translator/TranslatorAwareInterface.php" as="Zend/I18n/Translator/TranslatorAwareInterface.php"/>
    <install name="php/Zend/Json/Decoder.php" as="Zend/Json/Decoder.php"/>
+   <install name="php/Zend/Json/Encoder.php" as="Zend/Json/Encoder.php"/>
    <install name="php/Zend/Json/Exception/BadMethodCallException.php" as="Zend/Json/Exception/BadMethodCallException.php"/>
    <install name="php/Zend/Json/Exception/ExceptionInterface.php" as="Zend/Json/Exception/ExceptionInterface.php"/>
    <install name="php/Zend/Json/Exception/InvalidArgumentException.php" as="Zend/Json/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Json/Exception/RecursionException.php" as="Zend/Json/Exception/RecursionException.php"/>
    <install name="php/Zend/Json/Exception/RuntimeException.php" as="Zend/Json/Exception/RuntimeException.php"/>
+   <install name="php/Zend/Json/Expr.php" as="Zend/Json/Expr.php"/>
+   <install name="php/Zend/Json/Json.php" as="Zend/Json/Json.php"/>
+   <install name="php/Zend/Json/Server/Cache.php" as="Zend/Json/Server/Cache.php"/>
+   <install name="php/Zend/Json/Server/Client.php" as="Zend/Json/Server/Client.php"/>
+   <install name="php/Zend/Json/Server/Error.php" as="Zend/Json/Server/Error.php"/>
+   <install name="php/Zend/Json/Server/Exception/ErrorException.php" as="Zend/Json/Server/Exception/ErrorException.php"/>
+   <install name="php/Zend/Json/Server/Exception/ExceptionInterface.php" as="Zend/Json/Server/Exception/ExceptionInterface.php"/>
+   <install name="php/Zend/Json/Server/Exception/HttpException.php" as="Zend/Json/Server/Exception/HttpException.php"/>
+   <install name="php/Zend/Json/Server/Exception/InvalidArgumentException.php" as="Zend/Json/Server/Exception/InvalidArgumentException.php"/>
+   <install name="php/Zend/Json/Server/Exception/RuntimeException.php" as="Zend/Json/Server/Exception/RuntimeException.php"/>
+   <install name="php/Zend/Json/Server/Request.php" as="Zend/Json/Server/Request.php"/>
+   <install name="php/Zend/Json/Server/Request/Http.php" as="Zend/Json/Server/Request/Http.php"/>
+   <install name="php/Zend/Json/Server/Response.php" as="Zend/Json/Server/Response.php"/>
+   <install name="php/Zend/Json/Server/Response/Http.php" as="Zend/Json/Server/Response/Http.php"/>
+   <install name="php/Zend/Json/Server/Server.php" as="Zend/Json/Server/Server.php"/>
+   <install name="php/Zend/Json/Server/Smd.php" as="Zend/Json/Server/Smd.php"/>
+   <install name="php/Zend/Json/Server/Smd/Service.php" as="Zend/Json/Server/Smd/Service.php"/>
    <install name="php/Zend/Loader/AutoloaderFactory.php" as="Zend/Loader/AutoloaderFactory.php"/>
    <install name="php/Zend/Loader/ClassMapAutoloader.php" as="Zend/Loader/ClassMapAutoloader.php"/>
    <install name="php/Zend/Loader/Exception/BadMethodCallException.php" as="Zend/Loader/Exception/BadMethodCallException.php"/>
@@ -793,47 +768,55 @@
    <install name="php/Zend/Loader/ShortNameLocator.php" as="Zend/Loader/ShortNameLocator.php"/>
    <install name="php/Zend/Loader/SplAutoloader.php" as="Zend/Loader/SplAutoloader.php"/>
    <install name="php/Zend/Loader/StandardAutoloader.php" as="Zend/Loader/StandardAutoloader.php"/>
-   <install name="php/Zend/Serializer/Adapter/AbstractAdapter.php" as="Zend/Serializer/Adapter/AbstractAdapter.php"/>
-   <install name="php/Zend/Serializer/Adapter/AdapterInterface.php" as="Zend/Serializer/Adapter/AdapterInterface.php"/>
-   <install name="php/Zend/Serializer/Adapter/AdapterOptions.php" as="Zend/Serializer/Adapter/AdapterOptions.php"/>
-   <install name="php/Zend/Serializer/Adapter/IgBinary.php" as="Zend/Serializer/Adapter/IgBinary.php"/>
-   <install name="php/Zend/Serializer/Adapter/Json.php" as="Zend/Serializer/Adapter/Json.php"/>
-   <install name="php/Zend/Serializer/Adapter/JsonOptions.php" as="Zend/Serializer/Adapter/JsonOptions.php"/>
-   <install name="php/Zend/Serializer/Adapter/PhpCode.php" as="Zend/Serializer/Adapter/PhpCode.php"/>
-   <install name="php/Zend/Serializer/Adapter/PhpSerialize.php" as="Zend/Serializer/Adapter/PhpSerialize.php"/>
-   <install name="php/Zend/Serializer/Adapter/PythonPickle.php" as="Zend/Serializer/Adapter/PythonPickle.php"/>
-   <install name="php/Zend/Serializer/Adapter/PythonPickleOptions.php" as="Zend/Serializer/Adapter/PythonPickleOptions.php"/>
-   <install name="php/Zend/Serializer/Adapter/Wddx.php" as="Zend/Serializer/Adapter/Wddx.php"/>
-   <install name="php/Zend/Serializer/Adapter/WddxOptions.php" as="Zend/Serializer/Adapter/WddxOptions.php"/>
-   <install name="php/Zend/Serializer/AdapterPluginManager.php" as="Zend/Serializer/AdapterPluginManager.php"/>
-   <install name="php/Zend/Serializer/Exception/ExceptionInterface.php" as="Zend/Serializer/Exception/ExceptionInterface.php"/>
-   <install name="php/Zend/Serializer/Exception/ExtensionNotLoadedException.php" as="Zend/Serializer/Exception/ExtensionNotLoadedException.php"/>
-   <install name="php/Zend/Serializer/Exception/InvalidArgumentException.php" as="Zend/Serializer/Exception/InvalidArgumentException.php"/>
-   <install name="php/Zend/Serializer/Exception/RuntimeException.php" as="Zend/Serializer/Exception/RuntimeException.php"/>
-   <install name="php/Zend/Serializer/Serializer.php" as="Zend/Serializer/Serializer.php"/>
    <install name="php/Zend/Stdlib/AbstractOptions.php" as="Zend/Stdlib/AbstractOptions.php"/>
+   <install name="php/Zend/Stdlib/ArrayObject.php" as="Zend/Stdlib/ArrayObject.php"/>
+   <install name="php/Zend/Stdlib/ArrayObject/PhpLegacyCompatibility.php" as="Zend/Stdlib/ArrayObject/PhpLegacyCompatibility.php"/>
+   <install name="php/Zend/Stdlib/ArrayObject/PhpReferenceCompatibility.php" as="Zend/Stdlib/ArrayObject/PhpReferenceCompatibility.php"/>
    <install name="php/Zend/Stdlib/ArraySerializableInterface.php" as="Zend/Stdlib/ArraySerializableInterface.php"/>
    <install name="php/Zend/Stdlib/ArrayStack.php" as="Zend/Stdlib/ArrayStack.php"/>
    <install name="php/Zend/Stdlib/ArrayUtils.php" as="Zend/Stdlib/ArrayUtils.php"/>
    <install name="php/Zend/Stdlib/CallbackHandler.php" as="Zend/Stdlib/CallbackHandler.php"/>
+   <install name="php/Zend/Stdlib/compatibility/autoload.php" as="Zend/Stdlib/compatibility/autoload.php"/>
+   <install name="php/Zend/Stdlib/DateTime.php" as="Zend/Stdlib/DateTime.php"/>
    <install name="php/Zend/Stdlib/DispatchableInterface.php" as="Zend/Stdlib/DispatchableInterface.php"/>
    <install name="php/Zend/Stdlib/ErrorHandler.php" as="Zend/Stdlib/ErrorHandler.php"/>
    <install name="php/Zend/Stdlib/Exception/BadMethodCallException.php" as="Zend/Stdlib/Exception/BadMethodCallException.php"/>
    <install name="php/Zend/Stdlib/Exception/DomainException.php" as="Zend/Stdlib/Exception/DomainException.php"/>
    <install name="php/Zend/Stdlib/Exception/ExceptionInterface.php" as="Zend/Stdlib/Exception/ExceptionInterface.php"/>
+   <install name="php/Zend/Stdlib/Exception/ExtensionNotLoadedException.php" as="Zend/Stdlib/Exception/ExtensionNotLoadedException.php"/>
    <install name="php/Zend/Stdlib/Exception/InvalidArgumentException.php" as="Zend/Stdlib/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Stdlib/Exception/InvalidCallbackException.php" as="Zend/Stdlib/Exception/InvalidCallbackException.php"/>
    <install name="php/Zend/Stdlib/Exception/LogicException.php" as="Zend/Stdlib/Exception/LogicException.php"/>
+   <install name="php/Zend/Stdlib/Exception/RuntimeException.php" as="Zend/Stdlib/Exception/RuntimeException.php"/>
    <install name="php/Zend/Stdlib/Glob.php" as="Zend/Stdlib/Glob.php"/>
    <install name="php/Zend/Stdlib/Hydrator/AbstractHydrator.php" as="Zend/Stdlib/Hydrator/AbstractHydrator.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Aggregate/AggregateHydrator.php" as="Zend/Stdlib/Hydrator/Aggregate/AggregateHydrator.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Aggregate/ExtractEvent.php" as="Zend/Stdlib/Hydrator/Aggregate/ExtractEvent.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Aggregate/HydrateEvent.php" as="Zend/Stdlib/Hydrator/Aggregate/HydrateEvent.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Aggregate/HydratorListener.php" as="Zend/Stdlib/Hydrator/Aggregate/HydratorListener.php"/>
    <install name="php/Zend/Stdlib/Hydrator/ArraySerializable.php" as="Zend/Stdlib/Hydrator/ArraySerializable.php"/>
    <install name="php/Zend/Stdlib/Hydrator/ClassMethods.php" as="Zend/Stdlib/Hydrator/ClassMethods.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/FilterComposite.php" as="Zend/Stdlib/Hydrator/Filter/FilterComposite.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/FilterInterface.php" as="Zend/Stdlib/Hydrator/Filter/FilterInterface.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/FilterProviderInterface.php" as="Zend/Stdlib/Hydrator/Filter/FilterProviderInterface.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/GetFilter.php" as="Zend/Stdlib/Hydrator/Filter/GetFilter.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/HasFilter.php" as="Zend/Stdlib/Hydrator/Filter/HasFilter.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/IsFilter.php" as="Zend/Stdlib/Hydrator/Filter/IsFilter.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/MethodMatchFilter.php" as="Zend/Stdlib/Hydrator/Filter/MethodMatchFilter.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/NumberOfParameterFilter.php" as="Zend/Stdlib/Hydrator/Filter/NumberOfParameterFilter.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Filter/OptionalParametersFilter.php" as="Zend/Stdlib/Hydrator/Filter/OptionalParametersFilter.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/HydratorAwareInterface.php" as="Zend/Stdlib/Hydrator/HydratorAwareInterface.php"/>
    <install name="php/Zend/Stdlib/Hydrator/HydratorInterface.php" as="Zend/Stdlib/Hydrator/HydratorInterface.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/HydratorOptionsInterface.php" as="Zend/Stdlib/Hydrator/HydratorOptionsInterface.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/HydratorPluginManager.php" as="Zend/Stdlib/Hydrator/HydratorPluginManager.php"/>
    <install name="php/Zend/Stdlib/Hydrator/ObjectProperty.php" as="Zend/Stdlib/Hydrator/ObjectProperty.php"/>
    <install name="php/Zend/Stdlib/Hydrator/Reflection.php" as="Zend/Stdlib/Hydrator/Reflection.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Strategy/ClosureStrategy.php" as="Zend/Stdlib/Hydrator/Strategy/ClosureStrategy.php"/>
    <install name="php/Zend/Stdlib/Hydrator/Strategy/DefaultStrategy.php" as="Zend/Stdlib/Hydrator/Strategy/DefaultStrategy.php"/>
+   <install name="php/Zend/Stdlib/Hydrator/Strategy/SerializableStrategy.php" as="Zend/Stdlib/Hydrator/Strategy/SerializableStrategy.php"/>
    <install name="php/Zend/Stdlib/Hydrator/Strategy/StrategyInterface.php" as="Zend/Stdlib/Hydrator/Strategy/StrategyInterface.php"/>
    <install name="php/Zend/Stdlib/Hydrator/StrategyEnabledInterface.php" as="Zend/Stdlib/Hydrator/StrategyEnabledInterface.php"/>
+   <install name="php/Zend/Stdlib/InitializableInterface.php" as="Zend/Stdlib/InitializableInterface.php"/>
    <install name="php/Zend/Stdlib/Message.php" as="Zend/Stdlib/Message.php"/>
    <install name="php/Zend/Stdlib/MessageInterface.php" as="Zend/Stdlib/MessageInterface.php"/>
    <install name="php/Zend/Stdlib/ParameterObjectInterface.php" as="Zend/Stdlib/ParameterObjectInterface.php"/>
@@ -847,6 +830,13 @@
    <install name="php/Zend/Stdlib/SplPriorityQueue.php" as="Zend/Stdlib/SplPriorityQueue.php"/>
    <install name="php/Zend/Stdlib/SplQueue.php" as="Zend/Stdlib/SplQueue.php"/>
    <install name="php/Zend/Stdlib/SplStack.php" as="Zend/Stdlib/SplStack.php"/>
+   <install name="php/Zend/Stdlib/StringUtils.php" as="Zend/Stdlib/StringUtils.php"/>
+   <install name="php/Zend/Stdlib/StringWrapper/AbstractStringWrapper.php" as="Zend/Stdlib/StringWrapper/AbstractStringWrapper.php"/>
+   <install name="php/Zend/Stdlib/StringWrapper/Iconv.php" as="Zend/Stdlib/StringWrapper/Iconv.php"/>
+   <install name="php/Zend/Stdlib/StringWrapper/Intl.php" as="Zend/Stdlib/StringWrapper/Intl.php"/>
+   <install name="php/Zend/Stdlib/StringWrapper/MbString.php" as="Zend/Stdlib/StringWrapper/MbString.php"/>
+   <install name="php/Zend/Stdlib/StringWrapper/Native.php" as="Zend/Stdlib/StringWrapper/Native.php"/>
+   <install name="php/Zend/Stdlib/StringWrapper/StringWrapperInterface.php" as="Zend/Stdlib/StringWrapper/StringWrapperInterface.php"/>
    <install name="php/Zend/Uri/Exception/ExceptionInterface.php" as="Zend/Uri/Exception/ExceptionInterface.php"/>
    <install name="php/Zend/Uri/Exception/InvalidArgumentException.php" as="Zend/Uri/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Uri/Exception/InvalidUriException.php" as="Zend/Uri/Exception/InvalidUriException.php"/>
@@ -858,19 +848,105 @@
    <install name="php/Zend/Uri/UriFactory.php" as="Zend/Uri/UriFactory.php"/>
    <install name="php/Zend/Uri/UriInterface.php" as="Zend/Uri/UriInterface.php"/>
    <install name="php/Zend/Validator/AbstractValidator.php" as="Zend/Validator/AbstractValidator.php"/>
+   <install name="php/Zend/Validator/Barcode.php" as="Zend/Validator/Barcode.php"/>
+   <install name="php/Zend/Validator/Barcode/AbstractAdapter.php" as="Zend/Validator/Barcode/AbstractAdapter.php"/>
+   <install name="php/Zend/Validator/Barcode/AdapterInterface.php" as="Zend/Validator/Barcode/AdapterInterface.php"/>
+   <install name="php/Zend/Validator/Barcode/Codabar.php" as="Zend/Validator/Barcode/Codabar.php"/>
+   <install name="php/Zend/Validator/Barcode/Code25.php" as="Zend/Validator/Barcode/Code25.php"/>
+   <install name="php/Zend/Validator/Barcode/Code25interleaved.php" as="Zend/Validator/Barcode/Code25interleaved.php"/>
+   <install name="php/Zend/Validator/Barcode/Code39.php" as="Zend/Validator/Barcode/Code39.php"/>
+   <install name="php/Zend/Validator/Barcode/Code39ext.php" as="Zend/Validator/Barcode/Code39ext.php"/>
+   <install name="php/Zend/Validator/Barcode/Code93.php" as="Zend/Validator/Barcode/Code93.php"/>
+   <install name="php/Zend/Validator/Barcode/Code93ext.php" as="Zend/Validator/Barcode/Code93ext.php"/>
+   <install name="php/Zend/Validator/Barcode/Code128.php" as="Zend/Validator/Barcode/Code128.php"/>
+   <install name="php/Zend/Validator/Barcode/Ean2.php" as="Zend/Validator/Barcode/Ean2.php"/>
+   <install name="php/Zend/Validator/Barcode/Ean5.php" as="Zend/Validator/Barcode/Ean5.php"/>
+   <install name="php/Zend/Validator/Barcode/Ean8.php" as="Zend/Validator/Barcode/Ean8.php"/>
+   <install name="php/Zend/Validator/Barcode/Ean12.php" as="Zend/Validator/Barcode/Ean12.php"/>
+   <install name="php/Zend/Validator/Barcode/Ean13.php" as="Zend/Validator/Barcode/Ean13.php"/>
+   <install name="php/Zend/Validator/Barcode/Ean14.php" as="Zend/Validator/Barcode/Ean14.php"/>
+   <install name="php/Zend/Validator/Barcode/Ean18.php" as="Zend/Validator/Barcode/Ean18.php"/>
+   <install name="php/Zend/Validator/Barcode/Gtin12.php" as="Zend/Validator/Barcode/Gtin12.php"/>
+   <install name="php/Zend/Validator/Barcode/Gtin13.php" as="Zend/Validator/Barcode/Gtin13.php"/>
+   <install name="php/Zend/Validator/Barcode/Gtin14.php" as="Zend/Validator/Barcode/Gtin14.php"/>
+   <install name="php/Zend/Validator/Barcode/Identcode.php" as="Zend/Validator/Barcode/Identcode.php"/>
+   <install name="php/Zend/Validator/Barcode/Intelligentmail.php" as="Zend/Validator/Barcode/Intelligentmail.php"/>
+   <install name="php/Zend/Validator/Barcode/Issn.php" as="Zend/Validator/Barcode/Issn.php"/>
+   <install name="php/Zend/Validator/Barcode/Itf14.php" as="Zend/Validator/Barcode/Itf14.php"/>
+   <install name="php/Zend/Validator/Barcode/Leitcode.php" as="Zend/Validator/Barcode/Leitcode.php"/>
+   <install name="php/Zend/Validator/Barcode/Planet.php" as="Zend/Validator/Barcode/Planet.php"/>
+   <install name="php/Zend/Validator/Barcode/Postnet.php" as="Zend/Validator/Barcode/Postnet.php"/>
+   <install name="php/Zend/Validator/Barcode/Royalmail.php" as="Zend/Validator/Barcode/Royalmail.php"/>
+   <install name="php/Zend/Validator/Barcode/Sscc.php" as="Zend/Validator/Barcode/Sscc.php"/>
+   <install name="php/Zend/Validator/Barcode/Upca.php" as="Zend/Validator/Barcode/Upca.php"/>
+   <install name="php/Zend/Validator/Barcode/Upce.php" as="Zend/Validator/Barcode/Upce.php"/>
+   <install name="php/Zend/Validator/Between.php" as="Zend/Validator/Between.php"/>
+   <install name="php/Zend/Validator/Callback.php" as="Zend/Validator/Callback.php"/>
+   <install name="php/Zend/Validator/CreditCard.php" as="Zend/Validator/CreditCard.php"/>
+   <install name="php/Zend/Validator/Csrf.php" as="Zend/Validator/Csrf.php"/>
+   <install name="php/Zend/Validator/Date.php" as="Zend/Validator/Date.php"/>
+   <install name="php/Zend/Validator/DateStep.php" as="Zend/Validator/DateStep.php"/>
+   <install name="php/Zend/Validator/Db/AbstractDb.php" as="Zend/Validator/Db/AbstractDb.php"/>
+   <install name="php/Zend/Validator/Db/NoRecordExists.php" as="Zend/Validator/Db/NoRecordExists.php"/>
+   <install name="php/Zend/Validator/Db/RecordExists.php" as="Zend/Validator/Db/RecordExists.php"/>
+   <install name="php/Zend/Validator/Digits.php" as="Zend/Validator/Digits.php"/>
+   <install name="php/Zend/Validator/EmailAddress.php" as="Zend/Validator/EmailAddress.php"/>
    <install name="php/Zend/Validator/Exception/BadMethodCallException.php" as="Zend/Validator/Exception/BadMethodCallException.php"/>
    <install name="php/Zend/Validator/Exception/ExceptionInterface.php" as="Zend/Validator/Exception/ExceptionInterface.php"/>
    <install name="php/Zend/Validator/Exception/ExtensionNotLoadedException.php" as="Zend/Validator/Exception/ExtensionNotLoadedException.php"/>
    <install name="php/Zend/Validator/Exception/InvalidArgumentException.php" as="Zend/Validator/Exception/InvalidArgumentException.php"/>
    <install name="php/Zend/Validator/Exception/InvalidMagicMimeFileException.php" as="Zend/Validator/Exception/InvalidMagicMimeFileException.php"/>
    <install name="php/Zend/Validator/Exception/RuntimeException.php" as="Zend/Validator/Exception/RuntimeException.php"/>
+   <install name="php/Zend/Validator/Explode.php" as="Zend/Validator/Explode.php"/>
+   <install name="php/Zend/Validator/File/Count.php" as="Zend/Validator/File/Count.php"/>
+   <install name="php/Zend/Validator/File/Crc32.php" as="Zend/Validator/File/Crc32.php"/>
+   <install name="php/Zend/Validator/File/ExcludeExtension.php" as="Zend/Validator/File/ExcludeExtension.php"/>
+   <install name="php/Zend/Validator/File/ExcludeMimeType.php" as="Zend/Validator/File/ExcludeMimeType.php"/>
+   <install name="php/Zend/Validator/File/Exists.php" as="Zend/Validator/File/Exists.php"/>
+   <install name="php/Zend/Validator/File/Extension.php" as="Zend/Validator/File/Extension.php"/>
+   <install name="php/Zend/Validator/File/FilesSize.php" as="Zend/Validator/File/FilesSize.php"/>
+   <install name="php/Zend/Validator/File/Hash.php" as="Zend/Validator/File/Hash.php"/>
+   <install name="php/Zend/Validator/File/ImageSize.php" as="Zend/Validator/File/ImageSize.php"/>
+   <install name="php/Zend/Validator/File/IsCompressed.php" as="Zend/Validator/File/IsCompressed.php"/>
+   <install name="php/Zend/Validator/File/IsImage.php" as="Zend/Validator/File/IsImage.php"/>
+   <install name="php/Zend/Validator/File/Md5.php" as="Zend/Validator/File/Md5.php"/>
+   <install name="php/Zend/Validator/File/MimeType.php" as="Zend/Validator/File/MimeType.php"/>
+   <install name="php/Zend/Validator/File/NotExists.php" as="Zend/Validator/File/NotExists.php"/>
+   <install name="php/Zend/Validator/File/Sha1.php" as="Zend/Validator/File/Sha1.php"/>
+   <install name="php/Zend/Validator/File/Size.php" as="Zend/Validator/File/Size.php"/>
+   <install name="php/Zend/Validator/File/Upload.php" as="Zend/Validator/File/Upload.php"/>
+   <install name="php/Zend/Validator/File/UploadFile.php" as="Zend/Validator/File/UploadFile.php"/>
+   <install name="php/Zend/Validator/File/WordCount.php" as="Zend/Validator/File/WordCount.php"/>
+   <install name="php/Zend/Validator/GreaterThan.php" as="Zend/Validator/GreaterThan.php"/>
+   <install name="php/Zend/Validator/Hex.php" as="Zend/Validator/Hex.php"/>
    <install name="php/Zend/Validator/Hostname.php" as="Zend/Validator/Hostname.php"/>
    <install name="php/Zend/Validator/Hostname/Biz.php" as="Zend/Validator/Hostname/Biz.php"/>
    <install name="php/Zend/Validator/Hostname/Cn.php" as="Zend/Validator/Hostname/Cn.php"/>
    <install name="php/Zend/Validator/Hostname/Com.php" as="Zend/Validator/Hostname/Com.php"/>
    <install name="php/Zend/Validator/Hostname/Jp.php" as="Zend/Validator/Hostname/Jp.php"/>
+   <install name="php/Zend/Validator/Iban.php" as="Zend/Validator/Iban.php"/>
+   <install name="php/Zend/Validator/Identical.php" as="Zend/Validator/Identical.php"/>
+   <install name="php/Zend/Validator/InArray.php" as="Zend/Validator/InArray.php"/>
    <install name="php/Zend/Validator/Ip.php" as="Zend/Validator/Ip.php"/>
+   <install name="php/Zend/Validator/Isbn.php" as="Zend/Validator/Isbn.php"/>
+   <install name="php/Zend/Validator/IsInstanceOf.php" as="Zend/Validator/IsInstanceOf.php"/>
+   <install name="php/Zend/Validator/LessThan.php" as="Zend/Validator/LessThan.php"/>
+   <install name="php/Zend/Validator/NotEmpty.php" as="Zend/Validator/NotEmpty.php"/>
+   <install name="php/Zend/Validator/Regex.php" as="Zend/Validator/Regex.php"/>
+   <install name="php/Zend/Validator/Sitemap/Changefreq.php" as="Zend/Validator/Sitemap/Changefreq.php"/>
+   <install name="php/Zend/Validator/Sitemap/Lastmod.php" as="Zend/Validator/Sitemap/Lastmod.php"/>
+   <install name="php/Zend/Validator/Sitemap/Loc.php" as="Zend/Validator/Sitemap/Loc.php"/>
+   <install name="php/Zend/Validator/Sitemap/Priority.php" as="Zend/Validator/Sitemap/Priority.php"/>
+   <install name="php/Zend/Validator/StaticValidator.php" as="Zend/Validator/StaticValidator.php"/>
+   <install name="php/Zend/Validator/Step.php" as="Zend/Validator/Step.php"/>
+   <install name="php/Zend/Validator/StringLength.php" as="Zend/Validator/StringLength.php"/>
+   <install name="php/Zend/Validator/Translator/TranslatorAwareInterface.php" as="Zend/Validator/Translator/TranslatorAwareInterface.php"/>
+   <install name="php/Zend/Validator/Translator/TranslatorInterface.php" as="Zend/Validator/Translator/TranslatorInterface.php"/>
+   <install name="php/Zend/Validator/Uri.php" as="Zend/Validator/Uri.php"/>
+   <install name="php/Zend/Validator/ValidatorChain.php" as="Zend/Validator/ValidatorChain.php"/>
    <install name="php/Zend/Validator/ValidatorInterface.php" as="Zend/Validator/ValidatorInterface.php"/>
+   <install name="php/Zend/Validator/ValidatorPluginManager.php" as="Zend/Validator/ValidatorPluginManager.php"/>
+   <install name="php/Zend/Validator/ValidatorPluginManagerAwareInterface.php" as="Zend/Validator/ValidatorPluginManagerAwareInterface.php"/>
    <install name="test/__uri/Miffie/bootstrap.php" as="Miffie/bootstrap.php"/>
    <install name="test/__uri/Miffie/Miffie/Miffie/SpiderTest.php" as="Miffie/Miffie/Miffie/SpiderTest.php"/>
    <install name="test/__uri/Miffie/phpunit.xml" as="Miffie/phpunit.xml"/>

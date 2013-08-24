@@ -1,44 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Miffie" default="build">
+<project name="miffie" default="build">
 
  <taskdef name="stripforphar" classname="tasks.StripForPharTask" />
 
  <property name="basedir" value="." />
- <property name="zf2" value="vendor/zf2" />
- <property name="scraper" value="vendor/Diggin_Scraper" />
- <property name="htmlscraping" value="vendor/Diggin_Scraper_Adapter_Htmlscraping" />
- <property name="charset" value="vendor/Diggin_Http_Charset" />
- <property name="wedata" value="vendor/Diggin_Service_Wedata" />
+ 
+ <property name="zend-console" value="vendor/zendframework/zend-console" />
+ <property name="zend-dom" value="vendor/zendframework/zend-dom" />
+ <property name="zend-escaper" value="vendor/zendframework/zend-escaper" />
+ <property name="zend-http" value="vendor/zendframework/zend-http" />
+ <property name="zend-json" value="vendor/zendframework/zend-json" />
+ <property name="zend-loader" value="vendor/zendframework/zend-loader" />
+ <property name="zend-stdlib" value="vendor/zendframework/zend-stdlib" />
+ <property name="zend-uri" value="vendor/zendframework/zend-uri" />
+ <property name="zend-validator" value="vendor/zendframework/zend-validator" />
+
+ <property name="scraper" value="vendor/diggin/diggin-scraper" />
+ <property name="htmlscraping" value="vendor/diggin/diggin-scraper-adapter-htmlscraping" />
+ <property name="charset" value="vendor/diggin/diggin-http-charset" />
+ <property name="wedata" value="vendor/diggin/diggin-service-wedata" />
+ 
  <property name="pyrus" value="~/dev/pyrus_Pyrus/scripts/pyrus" />
 
  <!-- copy Miffie -->
 
  <!-- copy ZF2 -->
  <target name="zf2copy">
-  <copy toDir="${basedir}/src">
-   <fileset dir="${zf2}/library">
-    <include name="Zend/Cache/**/*.php" />
-    <include name="Zend/Console/**/*.php" />
-    <include name="Zend/Dom/Css2Xpath.php" />
-    <include name="Zend/Escaper/**/*.php" />
-    <include name="Zend/EventManager/**/*.php" />
-    <include name="Zend/Http/**/*.php" />
-    <include name="Zend/I18n/Translator/TranslatorAwareInterface.php" />
-    <include name="Zend/Json/Exception/*.php" />
-    <include name="Zend/Json/Exception.php" />
-    <include name="Zend/Json/Decoder.php" />
-    <include name="Zend/Serializer/**/*.php" />
-    <include name="Zend/Stdlib/**/*.php" />
-    <include name="Zend/Loader/**/*.php" />
-    <include name="Zend/Uri/**/*.php" />
-    <include name="Zend/Validator/ValidatorInterface.php" />
-    <include name="Zend/Validator/AbstractValidator.php" />
-    <include name="Zend/Validator/Hostname.php" />
-    <include name="Zend/Validator/Hostname/**/*.php" />
-    <include name="Zend/Validator/Ip.php" />
-    <include name="Zend/Validator/Exception/**/*.php" />
-   </fileset>
-  </copy>
+   <!-- copy Diggin_Scraper-->
+   <copy toDir="${basedir}/src"><fileset dir="${zend-console}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-dom}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-escaper}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-http}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-json}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-loader}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-stdlib}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-uri}"><include name="**/*.php" /></fileset></copy>
+   <copy toDir="${basedir}/src"><fileset dir="${zend-validator}"><include name="**/*.php" /></fileset></copy>
  </target>
 
  <target name="diggincopy">
