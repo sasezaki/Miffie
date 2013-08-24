@@ -1,0 +1,26 @@
+{
+    "name": "sasezaki/miffie",
+    "description": "scraping toolkit",
+    "require": {
+        "zendframework/zend-console": "2.2.*",
+        "zendframework/zend-http": "2.2.*",
+        "zendframework/zend-dom": "2.2.*",
+        "zendframework/zend-loader": "2.2.*",
+        "zendframework/zend-json": "2.2.*",
+        "diggin/diggin-scraper": "dev-master",
+        "diggin/diggin-scraper-adapter-htmlscraping": "dev-master",
+        "diggin/diggin-http-charset": "dev-master",
+        "diggin/diggin-service-wedata": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "sasezaki",
+            "email": "sasezaki@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Miffie\\": "src"
+        }
+    }
+}
