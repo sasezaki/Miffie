@@ -34,7 +34,15 @@ class CLIRunner
 
             foreach ($urls as $url) {
                 $runner = new Spider($options);
-                $runner->run($url);
+                try {
+                    $runner->run($url);
+                } catch(\Exception $e) {
+                    if (isset($options) && isset($options['silent']) && $options['silent']) {
+                        continue;
+                    } else {
+                        throw $e;
+                    }
+                }
             }
         } catch (\InvalidArgumentException $iae){
             echo $iae->getMessage(), PHP_EOL;
@@ -70,7 +78,8 @@ class CLIRunner
       'nextlink|n=s' => 'nextlink',
          'depth|d=i' => 'depth "if not set nextlink, using wedata"',
          'basic|b=s' => 'basic auth "user/pass"',
-         'cache|h' => 'cache with Zend\Cache',
+        'silent|s'   => 'silent if runner raise Exception',
+         'cache|h'   => 'cache with Zend\Cache',
        'noCache|r'   => 'no-cache-force',
           'wait|w=s' => 'sleep() :default 1',
         'filter|f=s' => 'filter for Diggin\Scraper',
