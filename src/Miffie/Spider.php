@@ -19,7 +19,7 @@ class Spider
     protected $stoptime;
     protected $depth;
     protected $filter;
-    
+
     protected $cache;
     protected $wedataStorage;
 
@@ -49,9 +49,8 @@ class Spider
 
             $client->setUri($url);
 
-            // is 
+            // is
             $urlparts = parse_url($url);
-            
 
             if (isset($urlparts['scheme'])) {
                 if (isset($opt['cache']) && !isset($opt['noCache'])) {
@@ -63,16 +62,16 @@ class Spider
                 $response = array(file_get_contents($url));
             }
 
-            if ($doNext && !isset($opt['nextlink'])){
+            if ($doNext && !isset($opt['nextlink'])) {
                 //searching wedata
                $nextLink = $this->searchNextLinkFromWedata($url) ;
-            } else if ($doNext && isset($opt['nextlink'])) {
+            } elseif ($doNext && isset($opt['nextlink'])) {
                $nextLink = $opt['nextlink'];
             }
-            
+
             $scraper = new Scraper();
             $scraper->setUrl($url);
-            
+
             $type = isset($opt['type']) ? $opt['type'] : 'TEXT';
             $helper = isset($opt['helper'])? $opt['helper'] : null;
 
@@ -101,13 +100,13 @@ class Spider
 
             $baseurl = (isset($opt['baseurl'])) ? $opt['baseurl'] : $url;
             $ret =  $scraper->scrape($response, $baseurl);
-          
+
             /**
             if ($helper) {
                 try {
                     $helperValue = $scraper->$helper();
                     echo (is_array($helperValue)) ? $helperValue[0]: $helperValue;
-                } catch (Exception $e){
+                } catch (Exception $e) {
                     die($e);
                 }
             } else {
@@ -121,7 +120,7 @@ class Spider
                 echo PHP_EOL;
                 goto loop_exit;
             }
-            
+
             if (!isset($ret['nextLink'])) {
                 echo 'next page not found';
                 exit;
@@ -150,7 +149,7 @@ class Spider
     {
         $opt = $this->options;
 
-        if(!isset($opt['xpath'])) {
+        if (!isset($opt['xpath'])) {
             throw new \InvalidArgumentException('currently, should use xpath: -x //html/body');
         }
 
@@ -163,7 +162,7 @@ class Spider
         $this->depth = isset($opt['depth']) ? $opt['depth'] : 1;
         $this->filter = isset($opt['filter']) ? static::evalFilter($opt['filter']) : null;
     }
-    
+
     public function getHttpClient()
     {
         if (!$this->httpClient) {
@@ -207,7 +206,7 @@ class Spider
     public static function evalFilter($string)
     {
         // replace
-        if ((substr($string, 0, 2) === 's/') or 
+        if ((substr($string, 0, 2) === 's/') or
         (substr($string, 0, 2) === 's#')) {
             $quote = substr($string,1,1);
             list($regex, $after) = explode($quote, substr($string, 2));
@@ -215,11 +214,12 @@ class Spider
 return preg_replace('/'.preg_quote("$regex", '/').'/', "$after", \$var);
 FUNC
 );
+
             return $filter;
         }
 
         // match
-        if ((substr($string, 0, 2) === 'm/') or 
+        if ((substr($string, 0, 2) === 'm/') or
             (substr($string, 0, 2) === 'm#')) {
             $quote = substr($string,1,1);
             list($regex, $index) = explode($quote, substr($string, 2));
@@ -272,10 +272,11 @@ FUNC
             $this->wedataStorage->setSearchItemDataIgnore(function ($current, $key, $iterator) {
                 //if ('^https?://.' != $item['data']['url'] && (preg_match('>'.$item['data']['url'].'>', $url) == 1)) {
                 $data = $current->getData();
+
                 return $data->url !== '^https?://.';
             });
         }
-        
+
         return $this->wedataStorage;
     }
 
@@ -294,11 +295,12 @@ FUNC
     {
         $key = md5($this->getHttpClient()->getRequest());
         if (!$httpResponseString = $this->getCacheStorage()->getItem($key)) {
-            $httpResponse = $this->getHttpClient()->send();     
+            $httpResponse = $this->getHttpClient()->send();
             $this->getCacheStorage()->setItem($key, $httpResponseString = $httpResponse->toString());
+
             return $httpResponse;
         }
-        
+
         return Response::fromstring($httpResponseString);
     }
 }

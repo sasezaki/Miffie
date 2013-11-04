@@ -12,7 +12,7 @@ class CLIRunner
         if (isset($argv[1]) && strpos($argv[1], '---') === 0) {
             if ($argv[1] == '---autopagerize-setup') {
                 static::setupAutoPagerize();
-            } else if ($argv[1] == '---autopagerize-search') {
+            } elseif ($argv[1] == '---autopagerize-search') {
                 static::testSearchAutoPagerize($argv[2]);
             }
             exit(0);
@@ -24,7 +24,7 @@ class CLIRunner
             $remain = $getopt->getRemainingArgs();
             if (count($remain) === 0) {
                 throw new \InvalidArgumentException('URL is not set');
-            } elseif ($remain[0] === '-'){
+            } elseif ($remain[0] === '-') {
                 if ($pipe = stream_get_contents(STDIN)) {
                     $urls = array_filter(explode(PHP_EOL, $pipe));
                 }
@@ -36,7 +36,7 @@ class CLIRunner
                 $runner = new Spider($options);
                 try {
                     $runner->run($url);
-                } catch(\Exception $e) {
+                } catch (\Exception $e) {
                     if (isset($options) && isset($options['silent']) && $options['silent']) {
                         continue;
                     } else {
@@ -44,7 +44,7 @@ class CLIRunner
                     }
                 }
             }
-        } catch (\InvalidArgumentException $iae){
+        } catch (\InvalidArgumentException $iae) {
             echo $iae->getMessage(), PHP_EOL;
             echo $getopt->getUsageMessage();
             echo '', PHP_EOL;
@@ -91,4 +91,3 @@ class CLIRunner
 
     }
 }
-
